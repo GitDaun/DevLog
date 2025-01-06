@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'sour-gummy': ['var(--font-sour-gummy)', 'sans-serif'],
+      },
     },
   },
   plugins: [],
