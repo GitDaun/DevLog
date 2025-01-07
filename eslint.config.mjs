@@ -11,13 +11,15 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-
    // 테스트 관련 플러그인
    ...compat.extends(
-    "plugin:testing-library/react",
-    "plugin:vitest/recommended",
-    "plugin:jest-dom/recommended"
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:testing-library/react",   
+    "plugin:jest-dom/recommended",    
+    "plugin:vitest/recommended",  
   ),
 
   {
@@ -25,11 +27,11 @@ const eslintConfig = [
     rules: {
       "no-unused-vars": "warn",
       "vitest/expect-expect": "off",
-      "react/prop-types": "off",
+      "react/prop-types": "on",
     },
     settings: {
       react: {
-        version: "19.0", // React 19 버전으로 업데이트
+        version: "19.0", 
       },
     },
     languageOptions: {

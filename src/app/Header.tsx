@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 export default function Header() {
   return (
-    <header className='border-gray-200 mt-[4dvh]'>
+    <header className='border-gray-200 py-[4dvh] bg-[#f5f5f5]'>
       <nav>
         <ul className='font-sour-gummy text-2xl font-[120]  flex flex-row gap-12 justify-center'>
 

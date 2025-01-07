@@ -8,14 +8,15 @@ export default defineConfig({
   test: {
     
     globals: true, // setupTst.ts 설정 읽을 수 있게
-    reportsDirectory: './coverage', // 커버리지 리포트 저장경로
+    outputFile: './coverage', // 커버리지 리포트 저장경로
     environment: 'jsdom', // JSDOM 환경 설정
     setupFiles: ['./src/setupTests.ts'], // setup 파일 경로 설정
-    include: ['**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    include: ['**/*.{test,spec}.{js,ts,jsx,tsx}'],
     deps: {
       optimizer: {
         web: {
-          include: ['@testing-library/jest-dom']
+          include: [
+            '@testing-library/jest-dom', '@testing-library/react']
         }
       }
     },
