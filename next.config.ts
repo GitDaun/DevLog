@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
+import svgr from 'vite-plugin-svgr'
 
 const nextConfig: NextConfig = {
-  // output: 'export',
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
     return config;
   },
   compiler: {
-    // ssr and displayName are configured by default
     styledComponents: true
   },
   experimental: {

@@ -2,14 +2,15 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  plugins: [tsconfigPaths(), react()],
+  plugins: [tsconfigPaths(), react(), svgr()],
   test: {
     
     globals: true, // setupTst.ts 설정 읽을 수 있게
-    outputFile: './coverage', // 커버리지 리포트 저장경로
     environment: 'jsdom', // JSDOM 환경 설정
+    outputFile: './coverage', // 커버리지 리포트 저장경로
     setupFiles: ['./src/setupTests.ts'], // setup 파일 경로 설정
     include: ['**/*.{test,spec}.{js,ts,jsx,tsx}'],
     deps: {
