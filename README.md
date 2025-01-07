@@ -56,6 +56,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
   - jsdom: 25.0.1                           :  브라우저 환경 시뮬레이션
   - @testing-library/react: 16.1.0          :  React 컴포넌트 테스트 도구
   - @testing-library/jest-dom: 6.6.3        :  DOM 테스트 매처
+  - @testing-library/user-event: 14.5.2     :  사용자 이벤트 테스트 도구
 
 - TypeScript 관련
 
