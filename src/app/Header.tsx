@@ -1,15 +1,16 @@
 'use client'
 
 import Link from 'next/link'
-import AboutMe from '../../public/aboutMe.svg'
-import Blog from '../../public/blog.svg'
-import Portfolio from '../../public/portfolio.svg'
-import Contact from '../../public/contact.svg'
+import AboutMe from '../assets/aboutMe.svg'
+import Blog from '../assets/blog.svg'
+import Portfolio from '../assets/portfolio.svg'
+import Contact from '../assets/contact.svg'
+
 import { motion } from 'framer-motion'
 
 export default function Header() {
   return (
-    <header className='border-gray-200 py-[4dvh] bg-[#f5f5f5]'>
+    <header className='border-gray-200 py-[4dvh] bg-[#f5f5f5] header'>
       <nav>
         <ul className='font-sour-gummy text-2xl font-[120]  flex flex-row gap-12 justify-center'>
 
