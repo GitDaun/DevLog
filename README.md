@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 3년차 프론트엔드 개발자 정다운 입니다.
 
 기존 Vue를 메인으로 2년 정도 사용했었지만
+SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니다.
 새로히 Next.js 15버전과 React 19버전을 사용하여 경험을 쌓고 싶어
 개인 블로그를 만들어 보았습니다.
 ```
@@ -19,11 +20,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## 사용 기술
 
-- Next.js 15버전
-- React 19버전
-- Tailwind CSS 3.4.1버전
-- TypeScript 5버전
-- Framer Motion 11.15.0버전
+- Next.js 15 버전
+- React 19 버전
+- Tailwind CSS 4.0 버전
+- TypeScript 5 버전
+- Framer Motion 11.15.0 버전
 - Vitest 2.1.8버전
 - React Library Test 16.1.0버전
 

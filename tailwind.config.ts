@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        'sour-gummy': ['var(--font-sour-gummy)', 'sans-serif'],
+        'sour-gummy': ['var(--font-sour-gummy)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },
