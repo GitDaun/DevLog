@@ -4,17 +4,12 @@ import { vi } from 'vitest';
 import SvgMock from '../../__mocks__/svgMock'; // 절대 경로 사용
 
 // SVG 모킹 적용
-vi.mock('../../assets/aboutMe.svg', 
-  () => ({ default: () => <SvgMock /> }));
+const mockTargets = ['aboutMe.svg', 'blog.svg', 'portfolio.svg', 'contact.svg'];
 
-vi.mock('../../assets/blog.svg', 
-  () => ({ default: () => <SvgMock /> }));
-
-vi.mock('../../assets/portfolio.svg', 
-  () => ({ default: () => <SvgMock /> }));
-
-vi.mock('../../assets/contact.svg', 
-  () => ({ default: () => <SvgMock /> }));
+mockTargets.forEach((target) => {
+  vi.mock(`../../assets/${target}`, 
+    () => ({ default: () => <SvgMock /> }));
+});
 
 
 describe('Header', () => {
