@@ -10,7 +10,15 @@ const sourGummy = Sour_Gummy({
 
 export const metadata: Metadata = {
   title: "Devlog of Daun",
-  description: "프론트엔드 개발자 정다운의 개발 블로그",
+  description: "FE 정다운의 개발 블로그",
+  icons: {
+    icon: [
+      {
+        url: "/favicon16.jpg",
+        type: "image/jpg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sourGummy.variable}  antialiased px-[10%]`} >
+      <body className={`${sourGummy.variable}  antialiased p-4`} >
         <Header/>
         {children}
       </body>
