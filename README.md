@@ -32,15 +32,15 @@ SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니
 
 ## 추가 사용 라이브러리
 
-- tailWimd 관련
+- tailwind 관련
 
   - @tailwindcss/postcss-8: 4.0.0 : Tailwind CSS와 PostCSS 8 호환을 위한 플러그인
   - postcss: 8.4.44 : Tailwind CSS 전처리기/후처리기 도구
   - clsx: 2.1.1 :  Tailwind CSS 조건부로 클래스명을 결합기능
 
-- 아이콘 관련
+- 다크모드 관련
 
-  - remixicon: 4.6.0 :  React 아이콘 라이브러리
+  - next-themes: 0.4.4 :  Next.js에서 다크모드 지원을 위한 라이브러리
 
 - SVG 파일 처리
 
