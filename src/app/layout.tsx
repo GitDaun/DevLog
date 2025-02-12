@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Sour_Gummy } from "next/font/google";
+import { ThemeProvider } from 'next-themes'
+
 import "./globals.css";
-import Header from './Header'
+
 
 const sourGummy = Sour_Gummy({
   variable: "--font-sour-gummy",
@@ -27,10 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${sourGummy.variable}  antialiased p-4`} >
-        <Header/>
-        {children}
+    <html lang="ko" suppressHydrationWarning>
+      <body className={`${sourGummy.variable} antialiased p-4 bg-white dark:bg-gray-900 dark:text-white`} suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
