@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import AboutMe from '../assets/aboutMe.svg'
 import Blog from '../assets/blog.svg'
@@ -10,73 +9,80 @@ import { motion, AnimatePresence } from 'framer-motion'
 import clsx from 'clsx'
 
 interface NavItem {
-  icon: any; // SVG 컴포넌트의 정확한 타입을 사용하는 것이 좋습니다
+  icon: any;
   text: string;
   href: string;
 }
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const navItems: NavItem[] = [
     { icon: AboutMe, text: 'About Me', href: '/' },
     { icon: Blog, text: 'Blog', href: '/blog' },
     { icon: Portfolio, text: 'Portfolio', href: '/' },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <header className='border-gray-200 py-[2dvh]'>
-      <nav className='' >
-      <AnimatePresence>
-        <ul 
-          className={clsx(`text-3xl  
-          sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly sm:scale-y-100
-        *:hover:text-slate-400 *:flex *:flex-row *:gap-1 *:items-center *:justify-center`,
-          {'flex flex-col h-screen w-screen bg-amber-300 absolute top-0 left-0 items-center justify-center gap-10 scale-y-100 transition-transform duration-300 ease-in-out origin-bottom ': isOpen === true, 
-          'hidden': isOpen === false
-          })}
-        >
-          {navItems.map(({ icon: Icon, text, href }) => (
-            <motion.div 
-              key={text}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    <header className='p-4 sm:p-8 md:p-12 lg:p-16 grid gap-y-6 sm:grid-rows-[min-content_1fr]'>
+      <nav className='relative' >
+        <AnimatePresence>
+          {(isOpen || !isMobile) && (
+            <motion.ul 
+              initial={isMobile ? { x: '-100%' } : { x: 0 }}
+              animate={{ x: 0 }}
+              exit={isMobile ? { x: '-100%' } : { x: 0 }}
+              transition={isMobile ? 
+                { type: "spring", stiffness: 300, damping: 30 } : 
+                { duration: 0 }
+              }
+              className={clsx(`
+                text-3xl
+                sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly
+                *:hover:text-slate-300 *:flex *:flex-row *:gap-1 *:items-center *:justify-center
+                fixed sm:static top-0 left-0 h-screen w-screen sm:h-auto sm:w-auto
+                bg-slate-100 sm:bg-transparent
+                flex flex-col items-center justify-center gap-10 z-50
+              `)}
             >
-              <Icon className='size-6'/>
-              <li>
-                <Link href={href}>{text}</Link>
-              </li>
-            </motion.div>
-          ))}
-        </ul>
+              {navItems.map(({ icon: Icon, text, href }) => (
+                <motion.div 
+                  key={text}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Icon className='size-6'/>
+                  <li>
+                    <Link href={href}>{text}</Link>
+                  </li>
+                </motion.div>
+              ))}
+            </motion.ul>
+          )}
         </AnimatePresence>
-        {/* <ul className=' text-2xl hidden sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly 
-        *:hover:text-slate-400 *:flex *:flex-row *:gap-1 *:items-center *:justify-center'>
-          {navItems.map(({ icon: Icon, text, href }) => (
-            <motion.div 
-              key={text}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <Icon className='size-6'/>
-              <li>
-                <Link href={href}>{text}</Link>
-              </li>
-            </motion.div>
-          ))}
-        </ul> */}
+
         <div className="flex gap-2 sm:hidden">
           <button 
             aria-label="메뉴 열기" 
-            className={
-              clsx('menu-button group z-1 scale-150', 
-              {'hidden': isOpen === true, 'block': isOpen === false})
-            } 
+            className={clsx('menu-button group z-[60] scale-150', 
+              {'hidden': isOpen, 'block cursor-pointer hover:transition-transform hover:scale-125': !isOpen}
+            )} 
             onClick={handleMenuClick}
           >
             <i className="text-2xl ri-menu-line"></i>
@@ -84,27 +90,23 @@ export default function Header() {
           <button 
             aria-label="메뉴 닫기"
             onClick={handleMenuClick}
-            className={
-              clsx('menu-button group z-1 scale-150', 
-              {'hidden': isOpen === false, 'block': isOpen === true})
-            }
+            className={clsx('menu-button group z-[60] scale-150', 
+              {'hidden': !isOpen, 'block cursor-pointer hover:transition-transform hover:scale-125': isOpen}
+            )}
           >
             <i className="text-2xl ri-close-line"></i>
           </button>
         </div>
-        <div className="flex gap-2 sm:hidden">
-          <button aria-label="메뉴 열기" className="menu-button group" >
+
+        <div className="flex gap-2">
+          <button aria-label="라이트 모드" className="menu-button cursor-pointer" >
             <i className="text-2xl ri-sun-line"></i>
           </button>
-          <button aria-label="메뉴 닫기" className="close-button group" >
+          <button aria-label="다크 모드" className="close-button cursor-pointer" >
            <i className="text-2xl ri-moon-line"></i>
           </button>
         </div>
       </nav>
-        {/* <div 
-          className={clsx('bg-red-300 h-full w-full absolute top-0 left-0 sm:hidden', 
-          {'block': isOpen === true, 'hidden': isOpen === false})}>
-        </div> */}
     </header> 
   )
 }
