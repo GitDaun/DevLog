@@ -1,95 +1,16 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useMotionValue, useTransform, motion, useSpring } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import FallingEffectComponent from './_components/SnowFlowerfall'
-
-// Snowflake 컴포넌트 추가
-const Snowflake = ({ style }) => {
-  return (
-    <div
-      className="snow"
-      style={{
-        ...style,
-        position: 'absolute',
-        color: '#fff',
-        fontSize: '10px',
-        opacity: 0.8,
-      }}
-    >
-      ❄
-    </div>
-  )
-}
+import { useImageMotion } from '../hooks/useImageMotion'
+import { useDarkMode } from '../hooks/useDarkMode'
 
 const Hero = () => {
-  const [windowOffset, setWindowOffset] = useState({ innerWidth: 0, innerHeight: 0 }) 
-  const [mouseMove, setMouseMove] = useState(false)
+  const year = new Date().getFullYear()
   const [buttonHover, setButtonHover] = useState(false)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  // 눈송이 상태 관리 추가
-  const [snowflakes, setSnowflakes] = useState([])
-  const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
-
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e
-    x.set(clientX)
-    y.set(clientY)
-  }
-
-  const handleMouseEnter = () => {
-    setWindowOffset({ innerWidth: window.innerWidth, innerHeight: window.innerHeight })
-    setMouseMove(true)
-  }
-
-  const { innerWidth, innerHeight } = windowOffset
-
-  const xSpring = useSpring(x, { stiffness: 100, damping: 10 })
-  const ySpring = useSpring(y, { stiffness: 100, damping: 10 })
-
-  const rotateY = useTransform(xSpring, [0, innerWidth], [-30, 30])
-  const rotateX = useTransform(ySpring, [0, innerHeight], [10, -50])
-
-  // mounted 상태 관리
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  // 다크모드 감지 수정
-  useEffect(() => {
-    if (!mounted) return
-    
-    setIsDarkMode(theme === 'dark')
-  }, [theme, mounted])
-
-  // 눈송이 생성 로직
-  useEffect(() => {
-    if (!isDarkMode) {
-      setSnowflakes([])
-      return
-    }
-
-    const createSnowflake = () => {
-      const snowflake = {
-        id: Math.random(),
-        left: `${Math.random() * 100}%`,
-        animationDuration: `${Math.random() * 3 + 2}s`,
-        opacity: Math.random() * 0.8 + 0.2, // 투명도 범위 조정
-        transform: `scale(${Math.random() * 0.5 + 0.5})`, // 크기 범위 조정
-      }
-
-      setSnowflakes(prev => [...prev.slice(-50), snowflake])
-    }
-
-    const interval = setInterval(createSnowflake, 200)
-    return () => clearInterval(interval)
-  }, [isDarkMode])
+  const { mouseMove, rotateX, rotateY, handleMouseMove, handleMouseEnter } = useImageMotion()
+  const { mounted, isDarkMode } = useDarkMode()
 
   if (!mounted) return null
 
@@ -100,7 +21,7 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
     >
-      <FallingEffectComponent />
+      <FallingEffectComponent isDarkMode={isDarkMode} />
       
       <div>
         <motion.div
@@ -139,7 +60,7 @@ const Hero = () => {
             </motion.span>
           </motion.div>
           <h1 className="text-center text-2xl font-bold tracking-widest text-zinc-600 sm:text-3xl  dark:text-white ">
-            FE 개발자 정다운 입니다
+             FE {year - 2022}년차 개발자 정다운 입니다
           </h1>
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
             I like animations 🤗

@@ -1,7 +1,6 @@
 'use client'
 
 import Heading from './_components/sub/Heading'
-import Achievements from './_components/sub/Achievements'
 import Image from 'next/image'
 
 const About = () => {

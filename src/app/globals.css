@@ -81,6 +81,9 @@
   pointer-events: none;
   z-index: 1;
   color: #fff;
+  text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #89CFF0;
 }
 
 .petal {

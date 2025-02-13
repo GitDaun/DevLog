@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
 
 interface Particle {
   id: number;
@@ -16,7 +15,7 @@ const Particle = ({ style, isDarkMode }: { style: React.CSSProperties; isDarkMod
     <div
       className={`
         absolute text-xs opacity-80 pointer-events-none z-10
-        ${isDarkMode ? 'text-white' : ''}
+        ${isDarkMode ? 'snow' : ''}
       `}
       style={style}
     >
@@ -25,11 +24,10 @@ const Particle = ({ style, isDarkMode }: { style: React.CSSProperties; isDarkMod
   )
 }
 
-const Snowfall = () => {
+const SnowFlowerFall = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [particles, setParticles] = useState<Particle[]>([])
-  const { theme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+
 
   useEffect(() => {
     setMounted(true)
@@ -38,31 +36,35 @@ const Snowfall = () => {
   // 다크모드 감지 및 파티클 초기화
   useEffect(() => {
     if (!mounted) return
-    setIsDarkMode(theme === 'dark')
     setParticles([]) // 모드 전환 시 파티클 초기화
-  }, [theme, mounted])
+  }, [isDarkMode, mounted])
 
   useEffect(() => {
+    // 새로운 파티클(눈/꽃잎)을 생성하는 함수
     const createParticle = () => {
       const particle = {
-        id: Math.random(),
-        left: `${Math.random() * 100}%`,
-        animationDuration: isDarkMode 
-          ? `${Math.random() * 3 + 2}s`  // 눈송이: 2-5초
-          : `${Math.random() * 4 + 6}s`, // 꽃잎: 6-10초
-        swayDuration: `${Math.random() * 3 + 2}s`, // 좌우 흔들림: 2-5초
-        opacity: Math.random() * 0.8 + 0.2,
+        id: Math.random(),  // 각 파티클의 고유 식별자
+        left: `${Math.random() * 100}%`,  // 화면 가로 위치를 0-100% 사이 무작위 설정
+        animationDuration: `${Math.random() * 4 + 6}s`, // 라이트모드(꽃잎): 6-10초 사이 낙하 시간
+        swayDuration: `${Math.random() * 3 + 2}s`, // 좌우 흔들림 애니메이션 주기 2-5초
+        opacity: Math.random() * 0.8 + 0.2,  // 투명도 0.2-1.0 사이 무작위 설정
         transform: isDarkMode
-          ? `scale(${Math.random() * 0.5 + 0.5})`
-          : `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.3 + 0.3})`,
+          ? `scale(${Math.random() * 0.5 + 0.5})`  // 눈: 크기 0.5-1.0배 무작위
+          : `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.3 + 0.3})`,  // 꽃잎: 0-360도 회전 + 0.3-0.6배 크기
       }
 
+      // 최대 50개까지만 파티클 유지 (성능 최적화)
+      // 새 파티클은 배열 끝에 추가하고, 50개 초과시 앞에서부터 제거
       setParticles(prev => [...prev.slice(-50), particle])
     }
 
+    // 파티클 생성 주기 설정
+    // 다크모드(눈): 200ms마다, 라이트모드(꽃잎): 400ms마다 생성
     const interval = setInterval(createParticle, isDarkMode ? 200 : 400)
+    
+    // 컴포넌트 언마운트 또는 isDarkMode 변경 시 인터벌 정리
     return () => clearInterval(interval)
-  }, [isDarkMode])
+  }, [isDarkMode])  // isDarkMode 변경 시 효과 재실행
 
   if (!mounted) return null
 
@@ -96,4 +98,4 @@ const Snowfall = () => {
   )
 }
 
-export default Snowfall 
+export default SnowFlowerFall 

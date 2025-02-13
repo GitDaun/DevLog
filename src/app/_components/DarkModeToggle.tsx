@@ -33,10 +33,13 @@ const DarkModeToggle = () => {
 
   return (
     <div className="flex gap-2">
-      <button 
+      <motion.button 
         aria-label={theme === 'dark' ? '라이트 모드' : '다크 모드'} 
-        className="scale-150 cursor-pointer hover:scale-110"
+        className="scale-150 cursor-pointer"
         onClick={toggleTheme}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
         <AnimatePresence mode="wait">
           <motion.i
@@ -52,7 +55,7 @@ const DarkModeToggle = () => {
             }`}
           />
         </AnimatePresence>
-      </button>
+      </motion.button>
     </div>
   )
 }

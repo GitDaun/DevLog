@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니다.
 
 새로히 Next.js 15버전과 React 19버전을 사용하여 경험을 쌓고 싶어
-개인 블로그를 만들어 보았습니다.
+개인 소개 페이지 / 블로그를 만들어 보았습니다.
 ```
 <br /><br />
 ## 프로젝트 설명

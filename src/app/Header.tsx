@@ -41,8 +41,6 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-
-
   return (
     <header className='p-4 sm:p-4 md:p-8 lg:p-8'>
       <div className="flex justify-between items-center">
@@ -60,9 +58,9 @@ export default function Header() {
                 className={clsx(`
                   text-3xl
                   sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly
-                  *:hover:text-slate-300 *:flex *:flex-row *:gap-1 *:items-center *:justify-center
+                  *:flex *:flex-row *:gap-1 *:items-center *:justify-center
                   fixed sm:static top-0 left-0 h-screen w-screen sm:h-auto sm:w-auto
-                  bg-slate-100 sm:bg-transparent
+                  bg-slate-100 dark:bg-black dark:sm:bg-transparent sm:bg-transparent
                   flex flex-col items-center justify-center gap-10 z-50
                 `)}
               >
