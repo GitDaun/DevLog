@@ -1,6 +1,7 @@
 'use client'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const DarkModeToggle = () => {
   const [mounted, setMounted] = useState(false)
@@ -34,12 +35,23 @@ const DarkModeToggle = () => {
     <div className="flex gap-2">
       <button 
         aria-label={theme === 'dark' ? '라이트 모드' : '다크 모드'} 
-        className="scale-150 cursor-pointer hover:transition-transform hover:scale-125"
+        className="scale-150 cursor-pointer hover:scale-110"
         onClick={toggleTheme}
       >
-        <i className={`text-2xl ${
-          theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line'
-        }`}></i>
+        <AnimatePresence mode="wait">
+          <motion.i
+            key={theme}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className={`text-2xl ${
+              theme === 'dark' 
+                ? 'ri-sun-line text-amber-300' 
+                : 'ri-moon-foggy-fill text-amber-500'
+            }`}
+          />
+        </AnimatePresence>
       </button>
     </div>
   )

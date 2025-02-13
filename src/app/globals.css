@@ -2,8 +2,7 @@
 @import 'tailwindcss';
 
 @theme{
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --font-kor: "CookieRun-Regular", "sans-serif";
 }
 
 @layer base {
@@ -14,12 +13,35 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  @font-face {
+    /*  400 700 900 */
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  .animate-fall {
+    animation: fall linear infinite;
+  }
+
+  .animate-sway {
+    animation: sway ease-in-out infinite alternate;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
   }
 }
 
@@ -33,28 +55,41 @@
   .after {
     @apply after:absolute after:content-[''];
   }
+}
 
-  .nav.open {
-    @apply scale-y-100 origin-top;
+@keyframes fall {
+  0% {
+    top: -10px;
+    opacity: 1;
   }
-
-  .hamburger.close {
-    div:first-child {
-      @apply rotate-45 translate-y-2;
-    }
-
-    div:nth-child(2) {
-      @apply opacity-0;
-    }
-
-    div:last-child {
-      @apply -rotate-45 -translate-y-2;
-    }
+  100% {
+    top: 100vh;
+    opacity: 0;
   }
+}
+
+@keyframes sway {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+
+.snow {
+  pointer-events: none;
+  z-index: 1;
+  color: #fff;
+}
+
+.petal {
+  pointer-events: none;
+  z-index: 1;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sour-gummy), Helvetica, sans-serif;
+  font-family: var(--font-sour-gummy), 'CookieRun-Regular', Helvetica, sans-serif;
 }
