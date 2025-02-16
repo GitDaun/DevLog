@@ -72,24 +72,33 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl"
         >
-  
-            <a
-              href="https://www.linkedin.com/in/%EB%8B%A4%EC%9A%B4-%EC%A0%95-198723245/"
-              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="ri-linkedin-line"></i>
-            </a>
-            <a
-              href="https://github.com/GitDaun"
-              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="ri-github-line"></i>
-              
-            </a>
+            <div className="relative group">
+              <a
+                href="https://www.linkedin.com/in/%EB%8B%A4%EC%9A%B4-%EC%A0%95-198723245/"
+                className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="ri-linkedin-line"></i>
+              </a>
+              <span className="tooltip">
+                링크드인 보기
+              </span>
+            </div>
+
+            <div className="relative group">
+              <a
+                href="https://github.com/GitDaun"
+                className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="ri-github-line"></i>
+              </a>
+              <span className="tooltip">
+                깃허브 보기
+              </span>
+            </div>
             <div className="relative group">
               <a
                 href="https://daunje0.tistory.com/"
@@ -99,13 +108,7 @@ const Hero = () => {
               >
                 <i className="ri-edit-2-line"></i>
               </a>
-              <span className="absolute -top-10 left-1/2 -translate-x-1/2 
-                             hidden group-hover:block 
-                             bg-gray-800 text-white dark:text-gray-800 dark:bg-white text-sm font-normal
-                             px-2 py-1 rounded-md whitespace-nowrap
-                             after:content-[''] after:absolute after:top-full after:left-1/2
-                             after:-translate-x-1/2 after:border-4
-                             after:border-transparent after:border-t-gray-800">
+              <span className="tooltip">
                 블로그 보기
               </span>
             </div>

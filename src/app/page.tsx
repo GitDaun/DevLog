@@ -5,7 +5,7 @@ import About from './About'
 export default function Home() {
   return (
     <div>
-      <main>
+      <main className='px-2 sm:px-12 md:px-24 lg:px-40 lg:py-10'>
        <Header/>
        <Hero/>
        <About/>

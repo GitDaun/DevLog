@@ -2,7 +2,8 @@
 @import 'tailwindcss';
 
 @theme{
-  --font-kor: "CookieRun-Regular", "sans-serif";
+  --font-title: "CookieRun-Regular", "sans-serif";
+  --font-kor: "SUIT-Regular", "sans-serif";
 }
 
 @layer base {
@@ -21,6 +22,14 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+  /* 100 - 900 */
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 @layer utilities {
@@ -30,6 +39,32 @@
 
   .animate-sway {
     animation: sway ease-in-out infinite alternate;
+  }
+
+  .text-kor {
+    font-family: 'SUIT-Regular', sans-serif;
+  }
+  .snow {
+    @apply pointer-events-none z-[1] text-white;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #89CFF0;
+  }
+
+  .petal {
+    @apply pointer-events-none z-[1];
+  }
+}
+
+@layer components {
+  .tooltip {
+    @apply absolute -top-10 left-1/2 -translate-x-1/2 
+    hidden group-hover:block 
+    bg-gray-800 text-white dark:text-gray-800 dark:bg-white text-sm font-normal
+    px-2 py-1 rounded-md whitespace-nowrap
+    after:content-[''] after:absolute after:top-full after:left-1/2
+    after:-translate-x-1/2 after:border-4
+    after:border-transparent after:border-t-gray-800
   }
 }
 
@@ -77,22 +112,8 @@
   }
 }
 
-.snow {
-  pointer-events: none;
-  z-index: 1;
-  color: #fff;
-  text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #89CFF0;
-}
-
-.petal {
-  pointer-events: none;
-  z-index: 1;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sour-gummy), 'CookieRun-Regular', Helvetica, sans-serif;
+  font-family: var(--font-sour-gummy), 'CookieRun-Regular', 'SUIT-Regular', Helvetica, sans-serif;
 }

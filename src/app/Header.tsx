@@ -42,7 +42,7 @@ export default function Header() {
   };
 
   return (
-    <header className='p-4 sm:p-4 md:p-8 lg:p-8'>
+    <header >
       <div className="flex justify-between items-center">
         <nav className='relative flex-grow' >
           <AnimatePresence>

@@ -8,14 +8,22 @@ const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    // 서버사이드 렌더링 중에는 실행하지 않음
+    if (typeof window === 'undefined') return;
+
     // 초기 마운트 시 로컬스토리지에서 테마 확인
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
       setTheme(savedTheme)
     } else {
-      // 저장된 테마가 없으면 시스템 테마 확인
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-      setTheme(systemTheme ? 'dark' : 'light')
+      try {
+        // 저장된 테마가 없으면 시스템 테마 확인
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        setTheme(systemTheme ? 'dark' : 'light')
+      } catch (error) {
+        // matchMedia API를 사용할 수 없는 경우 기본값으로 light 설정
+        setTheme('light')
+      }
     }
     setMounted(true)
   }, [setTheme])

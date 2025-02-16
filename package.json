@@ -8,9 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest --watch",
+    "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest run --coverage",
+    "coverage:ui": "vitest run --coverage && npx vite preview coverage"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -47,5 +48,10 @@
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
+  },
+  "vitest": {
+    "environment": "jsdom",
+    "globals": true,
+    "setupFiles": ["./src/test/setup.ts"]
   }
 }

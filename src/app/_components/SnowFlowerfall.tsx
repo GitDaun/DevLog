@@ -50,7 +50,7 @@ const SnowFlowerFall = ({ isDarkMode }: { isDarkMode: boolean }) => {
         opacity: Math.random() * 0.8 + 0.2,  // 투명도 0.2-1.0 사이 무작위 설정
         transform: isDarkMode
           ? `scale(${Math.random() * 0.5 + 0.5})`  // 눈: 크기 0.5-1.0배 무작위
-          : `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.3 + 0.3})`,  // 꽃잎: 0-360도 회전 + 0.3-0.6배 크기
+          : `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.3 + 0.7})`,  // 꽃잎: 0-360도 회전 + 0.3-1배 크기
       }
 
       // 최대 50개까지만 파티클 유지 (성능 최적화)
