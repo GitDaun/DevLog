@@ -8,6 +8,11 @@ type MotionComponentProps = {
 // data- 접두사를 붙이지 않을 속성들
 const PRESERVED_PROPS = ['aria-label', 'className', 'role', 'id', 'style'];
 
+// 속성 이름을 소문자로 변환하는 함수
+const toLowerCaseKey = (key: string): string => {
+  return key.toLowerCase();
+};
+
 // 동적 프로퍼티 접근을 위한 Proxy 패턴 사용
 // framer-motion 모킹시 props 앞에 data- 를 붙이기 위해 사용
 export const motion = new Proxy(
@@ -23,7 +28,7 @@ export const motion = new Proxy(
               ...acc,
               ...(key.startsWith('data-') || PRESERVED_PROPS.includes(key)
                 ? { [key]: value }
-                : { [`data-${key}`]: JSON.stringify(value) })
+                : { [`data-${toLowerCaseKey(key)}`]: JSON.stringify(value) })
             }), {})}
           >
             {children}

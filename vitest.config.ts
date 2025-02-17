@@ -1,4 +1,4 @@
-// vitest.config.ts
+/// <reference types="vitest" />
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -25,7 +25,7 @@ export default defineConfig({
       }
     },
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
       reporter: ['text', 'json', 'html'],
       reportsDirectory: './coverage',
       all: true,

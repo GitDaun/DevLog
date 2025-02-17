@@ -5,7 +5,11 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div id="about" className="min-h-screen flex flex-col items-center justify-center">
+    <div 
+      id="about" 
+      data-testid="about-section"
+      className="min-h-screen flex flex-col items-center justify-center"
+    >
       <Heading text={'About Me'} />
       <div className="w-full flex items-center justify-center sm:justify-center sm:gap-x-20">
         <Image

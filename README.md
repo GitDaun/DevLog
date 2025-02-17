@@ -60,8 +60,7 @@ SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니
 - UI 및 커버리지 도구
 
   - @vitest/ui: 2.1.8                       :  테스트 실행 UI 인터페이스
-  - @vitest/coverage-istanbul: 2.1.8        :  코드 커버리지 측정
-  - istanbul: 0.4.5                         :  상세 커버리지 리포트 생성
+  - @vitest/coverage-v8: 2.1.8             :  코드 커버리지 측정
 
 - DOM 테스트 도구
 
@@ -70,16 +69,18 @@ SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니
   - @testing-library/jest-dom: 6.6.3        :  DOM 테스트 매처
   - @testing-library/user-event: 14.5.2     :  사용자 이벤트 테스트 도구
 
-- TypeScript 관련
+- TypeScript 관련**
+  - `@typescript-eslint/eslint-plugin`: ^8.24.1 (TS 린팅 규칙)
+  - `@typescript-eslint/parser`: ^8.24.1 (TS 파싱)
+  - `@types/testing-library__jest-dom`: 5.14.9 (jest-dom 타입 정의)
 
-  - @typescript-eslint/eslint-plugin: 8.19.1 :  TS 린팅 규칙
-  - @typescript-eslint/parser: 8.19.1       :  TS 파싱
-  - @types/testing-library__jest-dom: 5.14.9 :  jest-dom 타입 정의
+- ESLint 플러그인
+  - `eslint-plugin-jest-dom`: 5.5.0 (jest-dom 린팅)
+  - `eslint-plugin-testing-library`: 7.1.1 (Testing Library 린팅)
+  - `eslint-plugin-vitest`: 0.5.4 (Vitest 린팅)
 
-- ESLint 관련
-
-  - eslint-plugin-jest-dom: 5.5.0           :  jest-dom 린팅
-  - eslint-plugin-testing-library: 7.1.1    :  Testing Library 린팅
-  - eslint-plugin-vitest: 0.5.4             :  Vitest 린팅
+- 코드 포맷팅
+  - `prettier`: ^3.5.1 (코드 포맷터)
+  - `prettier-eslint`: ^16.3.0 (Prettier와 ESLint 통합)
 
 <br /><br />
