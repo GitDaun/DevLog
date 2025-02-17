@@ -60,8 +60,7 @@ SI 업체에서 근무하면서 언제나 기술적인 목마름을 느꼈습니
 - UI 및 커버리지 도구
 
   - @vitest/ui: 2.1.8                       :  테스트 실행 UI 인터페이스
-  - @vitest/coverage-istanbul: 2.1.8        :  코드 커버리지 측정
-  - istanbul: 0.4.5                         :  상세 커버리지 리포트 생성
+  - @vitest/coverage-v8: 2.1.8             :  코드 커버리지 측정
 
 - DOM 테스트 도구
 
