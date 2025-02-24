@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
 import Header from '../Header';

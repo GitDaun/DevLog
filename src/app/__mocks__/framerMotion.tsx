@@ -43,4 +43,26 @@ export const AnimatePresence = ({ children }: { children: React.ReactNode }) => 
   <div data-testid="animate-presence">{children}</div>
 );
 
-export default { motion, AnimatePresence }; 
+export const useMotionValue = () => ({
+  get: () => 0,
+  set: () => {},
+});
+
+export const useSpring = () => ({
+  get: () => 0,
+  set: () => {},
+});
+
+export const useTransform = () => ({
+  get: () => 0,
+  set: () => {},
+});
+
+
+export default { 
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+  useTransform
+};   

@@ -78,6 +78,7 @@ const Hero = () => {
                 className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="링크드인 프로필"
               >
                 <i className="ri-linkedin-line"></i>
               </a>
@@ -92,6 +93,7 @@ const Hero = () => {
                 className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="깃허브 프로필"
               >
                 <i className="ri-github-line"></i>
               </a>
@@ -104,6 +106,7 @@ const Hero = () => {
                 href="https://daunje0.tistory.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="블로그 보기"
                 className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
               >
                 <i className="ri-edit-2-line"></i>
