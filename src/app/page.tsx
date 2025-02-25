@@ -1,6 +1,8 @@
 import Header from './Header'
 import Hero from './Hero'
 import About from './About'
+import Experience from './Experience'
+import Skills from './Skills'
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
        <Header/>
        <Hero/>
        <About/>
+       <Experience/>
+       {/* <Skills/> */}
         <article>
           <h1>Devlog of Daun</h1>
         </article>

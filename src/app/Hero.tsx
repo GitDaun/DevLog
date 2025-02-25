@@ -39,7 +39,7 @@ const Hero = () => {
             }}
           >
             <Image
-              src={'/person.png'}
+              src={'/person.webp'}
               alt="Person Image"
               width={400}
               height={400}
