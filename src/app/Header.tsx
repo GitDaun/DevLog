@@ -9,6 +9,7 @@ import Blog from '../assets/blog.svg'
 import Portfolio from '../assets/portfolio.svg'
 import clsx from 'clsx'
 import DarkModeToggle from './_components/DarkModeToggle'
+import { usePreventScroll } from '@/hooks/usePreventScroll'
 
 interface NavItem {
   icon: any;
@@ -41,8 +42,10 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  usePreventScroll(isOpen && isMobile);
+
   return (
-    <header >
+    <header className="relative z-50">
       <div className="flex justify-between items-center">
         <nav className='relative flex-grow' >
           <AnimatePresence>
@@ -60,7 +63,7 @@ export default function Header() {
                   sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly
                   *:flex *:flex-row *:gap-1 *:items-center *:justify-center
                   fixed sm:static top-0 left-0 h-screen w-screen sm:h-auto sm:w-auto
-                  bg-slate-100 dark:bg-black dark:sm:bg-transparent sm:bg-transparent
+                  bg-slate-100/95 dark:bg-black/95 dark:sm:bg-transparent sm:bg-transparent
                   flex flex-col items-center justify-center gap-10 z-50
                 `)}
               >
@@ -98,7 +101,7 @@ export default function Header() {
               aria-label="메뉴 닫기"
               onClick={handleMenuClick}
               className={clsx('group z-[60] scale-150', 
-                {'hidden': !isOpen, 'block cursor-pointer hover:transition-transform hover:scale-125': isOpen}
+                {'hidden': !isOpen, 'fixed cursor-pointer hover:transition-transform hover:scale-125': isOpen}
               )}
             >
               <i className="text-2xl ri-close-line"></i>

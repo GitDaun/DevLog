@@ -28,7 +28,7 @@ const Experience = () => {
       /> */}
       <div
         ref={containerRef}
-        className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 sm:gap-y-20 py-10"
+        className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 sm:gap-y-20 py-10 "
       >
         {experienceData.map((data, i) => (
           <div
@@ -45,6 +45,7 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, type: 'spring', stiffness: 50 }}
               className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide text-sm lg:text-base dark:bg-zinc-700 transition-colors z-20"
+
             >
               <h1 className="text-lg lg:text-xl font-light text-gray-700 dark:text-white">
                 {data.title}

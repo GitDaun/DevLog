@@ -24,7 +24,7 @@ const About = () => {
           <span className="absolute -left-5 top-1/2 -translate-y-1/2 scale-[2.5] text-zinc-100 hidden sm:block dark:text-zinc-700 transition-colors">
             <i className="ri-arrow-left-s-fill"></i>
           </span>
-          <p className="text-lg text-kor leading-10 font-normal text-gray-700 lg:text-[16px] sm:text-[14px] dark:text-white">
+          <p className="text-kor leading-10 font-normal text-gray-700  text-sm lg:text-base  dark:text-white">
             {/* {aboutText} */}
             {aboutText && (
               <>

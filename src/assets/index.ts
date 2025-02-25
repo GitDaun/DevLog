@@ -1,10 +1,6 @@
-// Hero
 
 
 // About Me
-
-
-
 export const aboutText = {
   introduction: "안녕하세요. Vue.js, JavaScript 기반의 프로젝트를 진행해 온 3년차 프론트엔드 개발자 정다운 입니다.",
   experience: "SI 프로젝트 현장 경험을 통해 협업 능력과 이슈 처리 능력을 키웠습니다.",
@@ -28,7 +24,7 @@ export const experienceData = [
       '하나캐피탈 코어 서비스인 차량 렌트/리스/핫딜 서비스 화면 개발',
       
     ],
-    skills:['/vue.svg', '/pinia.svg','/js.svg', '/github.svg']
+    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/GitHub.svg']
   },
   {
     year: '24.02',
@@ -42,7 +38,7 @@ export const experienceData = [
       'MiPlatform에서 Vue3로의 마이그레이션 및 AG-Grid 도입을 통한 성능 개선',
       '공통 컴포넌트 지원 작업 병행으로 Atomic 디자인 참여',
     ],
-    skills:['/vue.svg', '/pinia.svg','/js.svg', '/aggrid.png', '/jira.svg', '/confluence.svg', '/bitbucket.svg', '/storybook.svg']
+    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/AgGrid.png', '/Jira.svg', '/Confluence.svg', '/BitBucket.svg', '/StoryBook.svg']
   },
   {
     year: '24.06',
@@ -57,71 +53,96 @@ export const experienceData = [
       '팀 개발자들이 사용할 공통 함수, 컴포넌트, 프로시져, 스케쥴러 작성',
       'AG-Grid 엑셀 다운로드, 그리드 필터링 관련 및 타 개발팀의 MySQL 연동 프로시져, 이벤트 스케쥴러 작성',
     ],
-    skills:['/vue.svg', '/ts.svg', '/pinia.svg','/github.svg', '/tailwind.svg', '/aggrid.png' ,'/java.svg', '/springBoot.svg', '/mysql.svg']
+    skills:['/Vue.svg', '/TypeScript.svg', '/Pinia.svg','/GitHub.svg', '/TailWind.svg', '/AgGrid.png' ,'/Java.svg', '/SpringBoot.svg', '/MySQL.svg']
+  },
+  {
+    year: '24.09',
+    title: '개인 소개 페이지 개발',
+    works: [
+      '사내 전자 결재 프로세스 관련 화면 개발',
+      '해당 도메인 FE부터 BE, DB 설계 풀스택 개발',
+      '공통 컴포넌트 및 함수 모듈화 작업 수행',
+      '기여도 : 전자 결재 100%'
+    ],
+    achievements: [
+      'NextJS, TypeScript, TailwindCSS, Framer Motion 등 기술 스택 학습 및 적용',
+      '개인 소개 페이지 개발',
+    ],
+    skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp']
   },
 ]
+// End of Experience
 
 // Skills
 export const skillsData = [
 
   {
     name: 'HTML',
-    icon: '/skills/html.png',
+    icon: '/HTML.svg',
   },
   {
     name: 'CSS',
-    icon: '/skills/css.png',
+    icon: '/CSS.svg',
   },
   {
     name: 'TailwindCSS',
-    icon: '/skills/tailwind.png',
+    icon: '/TailWind.svg',
   },
   {
     name: 'JavaScript',
-    icon: '/skills/js.png',
+    icon: '/JavaScript.svg',
   },
   {
     name: 'TypeScript',
-    icon: '/skills/ts.png',
-  },
-  {
-    name: 'VueJS',
-    icon: '/skills/vue.png',
+    icon: '/TypeScript.svg',
   },
   {
     name: 'ReactJS',
-    icon: '/skills/react.png',
+    icon: '/ReactJS.svg',
   },
   {
     name: 'NextJS',
-    icon: '/skills/nextjs.png',
+    icon: '/NextJS.webp',
   },
   {
-    name: 'Vite',
-    icon: '/skills/vite.png',
+    name: 'VueJS',
+    icon: '/Vue.svg',
+  },
+  {
+    name: 'Vitest',
+    icon: '/Vitest.svg',
   },
     {
     name: 'Figma',
-    icon: '/skills/figma.png',
+    icon: '/Figma.svg',
   },
   {
     name: 'Photoshop',
-    icon: '/skills/photoshop.png',
+    icon: '/Photoshop.svg',
   },
   {
     name: 'Framer Motion',
-    icon: '/skills/framer.png',
+    icon: '/FramerMotion.webp',
+  },
+  {
+    name: 'JAVA',
+    icon: '/Java.svg',
+  },
+  {
+    name: 'SpringBoot',
+    icon: '/SpringBoot.svg',
   },
   {
     name: 'MySQL',
-    icon: '/skills/mysql.png',
+    icon: '/MySQL.svg',
   },
   {
     name: 'PostgreSQL',
-    icon: '/skills/postgresql.png',
+    icon: '/PostgreSQL.svg',
   },
   {
     name: 'Github',
-    icon: '/skills/github.png',
+    icon: '/GitHub.svg',
   },
 ]
+// End of Skills
