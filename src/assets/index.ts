@@ -30,7 +30,7 @@ export const experienceData = [
     year: '24.02',
     title: '지에스 리테일 수퍼 통합 프로젝트(4개월)',
     works:[
-      'Vue3 환경에서 AG-Grid를 활용하여 GS THE FRESH 전사 수주 관련 어플리케이션의 행사/발주 파트 화면을 개발하고, 데이터 바인딩 및 주요 기능을 구현',
+      'Vue3 환경에서 AG-Grid를 활용하여 GS THE FRESH 전사 수주 관련 어플리케이션의 행사/발주 파트 화면을 개발하고, 데이터 바인딩 구현',
       'Atomic 디자인 방법론 기반의 컴포넌트 시스템을 활용하여 UI를 구현하고, 별도 퍼블리싱 팀과의 협업을 통해 사용자 인터페이스 완성도를 높였습니다',
       '기여도: 행사/발주 파트 개발 기여도 25%'
     ],
@@ -59,16 +59,13 @@ export const experienceData = [
     year: '24.09',
     title: '개인 소개 페이지 개발',
     works: [
-      '사내 전자 결재 프로세스 관련 화면 개발',
-      '해당 도메인 FE부터 BE, DB 설계 풀스택 개발',
-      '공통 컴포넌트 및 함수 모듈화 작업 수행',
-      '기여도 : 전자 결재 100%'
+      '기여도 :  100%'
     ],
     achievements: [
       'NextJS, TypeScript, TailwindCSS, Framer Motion 등 기술 스택 학습 및 적용',
       '개인 소개 페이지 개발',
     ],
-    skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp']
+    skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp', '/Vitest.svg']
   },
 ]
 // End of Experience

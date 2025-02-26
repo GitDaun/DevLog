@@ -1,5 +1,5 @@
 'use client'
-import Heading from './_components/sub/Heading'
+import Heading from './sub/Heading'
 import Image from 'next/image'
 import { experienceData } from '@/assets/index.ts'
 import { motion, useScroll, useSpring } from 'framer-motion'

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import About from '../About';
+import About from '../_components/About';
 
 // Next/Image 모킹
 vi.mock('next/image', () => ({

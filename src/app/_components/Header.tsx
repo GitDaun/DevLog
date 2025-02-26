@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import Link from 'next/link'
-import AboutMe from '../assets/aboutMe.svg'
-import Blog from '../assets/blog.svg'
-import Portfolio from '../assets/portfolio.svg'
+import AboutMe from '@/assets/aboutMe.svg'
+import Blog from '@/assets/blog.svg'
+import Portfolio from '@/assets/portfolio.svg'
 import clsx from 'clsx'
-import DarkModeToggle from './_components/DarkModeToggle'
+import DarkModeToggle from './DarkModeToggle'
 import { usePreventScroll } from '@/hooks/usePreventScroll'
 
 interface NavItem {

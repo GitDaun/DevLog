@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
-import Header from '../Header';
+import Header from '../_components/Header';
 import { mockSetTheme } from '../__mocks__/nextThemes';
 
 // SVG 파일들 모킹

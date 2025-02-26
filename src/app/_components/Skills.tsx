@@ -1,8 +1,8 @@
 'use client'
-import Heading from './_components/sub/Heading'
+import { motion } from 'framer-motion'
+import Heading from './sub/Heading'
 import Image from 'next/image'
 import { skillsData } from '@/assets/index.ts'
-import { motion } from 'framer-motion'
 
 const Skills = () => {
   const variants = {
@@ -24,7 +24,8 @@ const Skills = () => {
       <div className="w-full grid grid-cols-2 gap-4 px-4 
         sm:grid-cols-3 sm:gap-6 
         md:grid-cols-4 md:gap-8 
-        lg:flex lg:flex-wrap lg:justify-between lg:gap-x-8 lg:gap-y-6 lg:px-0">
+        lg:flex lg:flex-wrap lg:justify-between lg:gap-x-8 lg:gap-y-6 lg:px-0
+        *:hover:rotate-3 *:transition-transform *:duration-100 *:ease-in-out">
         {skillsData.map((item, i) => (
           <motion.div
             custom={i}

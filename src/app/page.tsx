@@ -1,9 +1,10 @@
-import Header from './Header'
-import Hero from './Hero'
-import About from './About'
-import Experience from './Experience'
-import Skills from './Skills'
+import Header from './_components/Header'
+import Hero from './_components/Hero'
+import About from './_components/About'
+import Experience from './_components/Experience'
+import Skills from './_components/Skills'
 import Load from './_components/sub/Load'
+
 export default function Home() {
   return (
     <div>

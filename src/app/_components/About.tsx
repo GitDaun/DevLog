@@ -1,6 +1,6 @@
 'use client'
 
-import Heading from './_components/sub/Heading'
+import Heading from '@/app/_components/sub/Heading'
 import Image from 'next/image'
 import { aboutText } from '@/assets/index'
 
