@@ -6,8 +6,6 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 import { useRef } from 'react'
 
 const Experience = () => {
-  const date = new Date().getFullYear()
-
   const containerRef = useRef(null)
 
   const { scrollYProgress } = useScroll({
@@ -19,13 +17,6 @@ const Experience = () => {
   return (
     <div id="experience" className="relative py-20">
       <Heading text={'Experience & Education'} />
-      {/* <Image
-        src={'/education.png'}
-        alt={'Experience Image'}
-        width={400}
-        height={400}
-        className="2xl:flex 2xl:absolute 2xl:-top-4 xl:right-20 2xl:right-60 2xl:opacity-70 2xl:rounded-4xl hidden"
-      /> */}
       <div
         ref={containerRef}
         className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 sm:gap-y-20 py-10 "
@@ -33,7 +24,7 @@ const Experience = () => {
         {experienceData.map((data, i) => (
           <div
             key={`id-${i}`}
-            className={`xl:w-[600px] sm:w-[480px] w-full lg:px-12 px-0 relative ${
+            className={`xl:w-[600px] sm:w-[480px] w-full lg:px-12 px-0 relative  ${
               i % 2 === 0
                 ? 'xl:-left-[300px] lg:-left-[240px] -left-0'
                 : 'xl:left-[300px] lg:left-[240px] left-0'
@@ -44,8 +35,11 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, type: 'spring', stiffness: 50 }}
-              className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide text-sm lg:text-base dark:bg-zinc-700 transition-colors z-20"
-
+              className={`relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 
+                tracking-wide text-sm lg:text-base dark:bg-zinc-700 transition-colors z-20 ${
+                data.swaper ? 'cursor-pointer hover:scale-105' : ''
+              }`}
+              onClick={data.swaper ? () => {alert('test')} : undefined}
             >
               <h1 className="text-lg lg:text-xl font-light text-gray-700 dark:text-white">
                 {data.title}

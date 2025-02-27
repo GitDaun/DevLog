@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import FallingEffectComponent from '@/app/_components/SnowFlowerfall'
+import FallingEffectComponent from './sub/SnowFlowerfall'
 import { useImageMotion } from '@/hooks/useImageMotion'
 import { useDarkMode } from '@/hooks/useDarkMode'
 

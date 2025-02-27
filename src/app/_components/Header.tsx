@@ -8,7 +8,7 @@ import AboutMe from '@/assets/aboutMe.svg'
 import Blog from '@/assets/blog.svg'
 import Portfolio from '@/assets/portfolio.svg'
 import clsx from 'clsx'
-import DarkModeToggle from './DarkModeToggle'
+import DarkModeToggle from './sub/DarkModeToggle'
 import { usePreventScroll } from '@/hooks/usePreventScroll'
 
 interface NavItem {

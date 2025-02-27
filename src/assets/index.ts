@@ -24,7 +24,8 @@ export const experienceData = [
       '하나캐피탈 코어 서비스인 차량 렌트/리스/핫딜 서비스 화면 개발',
       
     ],
-    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/GitHub.svg']
+    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/GitHub.svg'],
+    swaper: true
   },
   {
     year: '24.02',
@@ -35,10 +36,11 @@ export const experienceData = [
       '기여도: 행사/발주 파트 개발 기여도 25%'
     ],
     achievements: [
-      'MiPlatform에서 Vue3로의 마이그레이션 및 AG-Grid 도입을 통한 성능 개선',
+      
       '공통 컴포넌트 지원 작업 병행으로 Atomic 디자인 참여',
     ],
-    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/AgGrid.png', '/Jira.svg', '/Confluence.svg', '/BitBucket.svg', '/StoryBook.svg']
+    skills:['/Vue.svg', '/Pinia.svg','/JavaScript.svg', '/AgGrid.png', '/Jira.svg', '/Confluence.svg', '/BitBucket.svg', '/StoryBook.svg'],
+    swaper: false
   },
   {
     year: '24.06',
@@ -53,7 +55,8 @@ export const experienceData = [
       '팀 개발자들이 사용할 공통 함수, 컴포넌트, 프로시져, 스케쥴러 작성',
       'AG-Grid 엑셀 다운로드, 그리드 필터링 관련 및 타 개발팀의 MySQL 연동 프로시져, 이벤트 스케쥴러 작성',
     ],
-    skills:['/Vue.svg', '/TypeScript.svg', '/Pinia.svg','/GitHub.svg', '/TailWind.svg', '/AgGrid.png' ,'/Java.svg', '/SpringBoot.svg', '/MySQL.svg']
+    skills:['/Vue.svg', '/TypeScript.svg', '/Pinia.svg','/GitHub.svg', '/TailWind.svg', '/AgGrid.png' ,'/Java.svg', '/SpringBoot.svg', '/MySQL.svg'],
+    swaper: false
   },
   {
     year: '24.09',
@@ -65,7 +68,8 @@ export const experienceData = [
       'NextJS, TypeScript, TailwindCSS, Framer Motion 등 기술 스택 학습 및 적용',
       '개인 소개 페이지 개발',
     ],
-    skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp', '/Vitest.svg']
+    skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp', '/Vitest.svg'],
+    swaper: false
   },
 ]
 // End of Experience
