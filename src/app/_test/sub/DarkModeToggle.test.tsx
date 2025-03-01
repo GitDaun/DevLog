@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import DarkModeToggle from '../_components/sub/DarkModeToggle';
+import DarkModeToggle from '../../_components/sub/DarkModeToggle';
 import { vi } from 'vitest';
 
 // next-themes 모킹

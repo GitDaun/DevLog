@@ -40,7 +40,7 @@ const DarkModeToggle = () => {
   }
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 xl:pr-10 md:pr-5 pr-3">
       <motion.button 
         aria-label={theme === 'dark' ? '라이트 모드' : '다크 모드'} 
         className="scale-150 cursor-pointer"

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Modal from '../_components/sub/Modal';
+import Modal from '../../_components/sub/Modal';
 
 // Swiper 모킹
 vi.mock('../_components/sub/Swiper', () => ({

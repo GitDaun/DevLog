@@ -57,7 +57,7 @@ export const experienceData = [
     swaper: false
   },
   {
-    year: '24.09',
+    year: '25.02',
     title: '개인 소개 페이지 개발',
     works: [
       '기여도 :  100%'

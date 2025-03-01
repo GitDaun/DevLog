@@ -37,7 +37,7 @@ const Swiper = () => {
       >
         {swiperData.map((slide, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
-            <div className="relative w-full h-[30rem] md:h-[43.75rem] flex items-center justify-center">
+            <div className="relative w-full h-[30rem] md:h-[43.75rem] lg:h-[37rem] 2xl:h-[43.75rem] flex items-center justify-center">
               <Image 
                 src={slide.imgPath}
                 alt={slide.title}
