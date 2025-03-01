@@ -3,13 +3,12 @@
 import { useState, useEffect } from 'react'   
 import { motion, AnimatePresence } from 'framer-motion'
 
-import Link from 'next/link'
 import AboutMe from '@/assets/aboutMe.svg'
 import Blog from '@/assets/blog.svg'
-import Portfolio from '@/assets/portfolio.svg'
-import clsx from 'clsx'
+// import Portfolio from '@/assets/portfolio.svg'
 import DarkModeToggle from './sub/DarkModeToggle'
 import { usePreventScroll } from '@/hooks/usePreventScroll'
+import Button from './sub/Button'
 
 interface NavItem {
   icon: any;
@@ -23,8 +22,8 @@ export default function Header() {
 
   const navItems: NavItem[] = [
     { icon: AboutMe, text: 'About Me', href: '/' },
-    { icon: Blog, text: 'Blog', href: '/blog' },
-    { icon: Portfolio, text: 'Portfolio', href: '/' },
+    { icon: Blog, text: 'Blog', href: 'https://daunje0.tistory.com/' },
+    // { icon: Portfolio, text: 'Portfolio', href: '/' },
   ];
 
   useEffect(() => {
@@ -58,14 +57,15 @@ export default function Header() {
                   { type: "spring", stiffness: 300, damping: 30 } : 
                   { duration: 0 }
                 }
-                className={clsx(`
+                className={`
                   text-3xl
                   sm:font-extralight sm:flex sm:flex-row sm:items-center sm:justify-evenly
                   *:flex *:flex-row *:gap-1 *:items-center *:justify-center
                   fixed sm:static top-0 left-0 h-screen w-screen sm:h-auto sm:w-auto
                   bg-slate-100/95 dark:bg-black/95 dark:sm:bg-transparent sm:bg-transparent
                   flex flex-col items-center justify-center gap-10 z-50
-                `)}
+                `}
+               
               >
                 {navItems.map(({ icon: Icon, text, href }) => (
                   <motion.div 
@@ -76,7 +76,11 @@ export default function Header() {
                   >
                     <Icon className='size-6'/>
                     <li>
-                      <Link href={href}>{text}</Link>
+                      {/* <Link href={href}>{text}</Link> */}
+                      <a href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{text}</a>
                     </li>
                   </motion.div>
                 ))}
@@ -88,24 +92,23 @@ export default function Header() {
         <div className="w-full sm:w-auto flex items-center justify-between sm:justify-end gap-2">
           {/* 모바일 햄버거 메뉴 */}
           <div className="sm:hidden flex gap-2">
-            <button 
-              aria-label="메뉴 열기" 
-              className={clsx('group z-[60] scale-150', 
-                {'hidden': isOpen, 'block cursor-pointer hover:transition-transform hover:scale-125': !isOpen}
-              )} 
+            <Button 
+              variant="menu"
+              aria-label="메뉴 열기"
+              isActive={isOpen}
               onClick={handleMenuClick}
             >
               <i className="text-2xl ri-menu-line"></i>
-            </button>
-            <button 
+            </Button>
+            <Button 
+              variant="menu"
               aria-label="메뉴 닫기"
+              isActive={!isOpen}
               onClick={handleMenuClick}
-              className={clsx('group z-[60] scale-150', 
-                {'hidden': !isOpen, 'fixed cursor-pointer hover:transition-transform hover:scale-125': isOpen}
-              )}
+              className="close"
             >
               <i className="text-2xl ri-close-line"></i>
-            </button>
+            </Button>
           </div>
 
           {/* 다크모드 토글 */}

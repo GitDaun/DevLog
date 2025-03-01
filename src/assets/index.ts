@@ -63,7 +63,7 @@ export const experienceData = [
       '기여도 :  100%'
     ],
     achievements: [
-      'NextJS, TypeScript, TailwindCSS, Framer Motion 등 기술 스택 학습 및 적용',
+      'NextJS, TypeScript, TailwindCSS, Framer Motion, Vitest 기술 스택 학습 및 적용',
       '개인 소개 페이지 개발',
     ],
     skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp', '/Vitest.svg'],

@@ -48,13 +48,15 @@ describe('Header 컴포넌트', () => {
 
   it('네비게이션 링크와 아이콘이 올바르게 렌더링되어야 함', () => {
     // 텍스트 확인
-    const links = ['About Me', 'Blog', 'Portfolio'];
+    const links = ['About Me', 'Blog'];
+    // const links = ['About Me', 'Blog', 'Portfolio'];
     links.forEach(link => {
       expect(screen.getByText(link)).toBeInTheDocument();
     });
 
     // 아이콘 확인
-    const icons = ['about-me-icon', 'blog-icon', 'portfolio-icon'];
+    const icons = ['about-me-icon', 'blog-icon'];
+    // const icons = ['about-me-icon', 'blog-icon', 'portfolio-icon'];
     icons.forEach(icon => {
       expect(screen.getByTestId(icon)).toBeInTheDocument();
     });
@@ -85,11 +87,11 @@ describe('Header 컴포넌트', () => {
   it('링크들이 올바른 href를 가지고 있어야 함', () => {
     const aboutLink = screen.getByText('About Me').closest('a');
     const blogLink = screen.getByText('Blog').closest('a');
-    const portfolioLink = screen.getByText('Portfolio').closest('a');
+    // const portfolioLink = screen.getByText('Portfolio').closest('a');
 
     expect(aboutLink).toHaveAttribute('href', '/');
-    expect(blogLink).toHaveAttribute('href', '/blog');
-    expect(portfolioLink).toHaveAttribute('href', '/');
+    expect(blogLink).toHaveAttribute('href', 'https://daunje0.tistory.com/');
+    // expect(portfolioLink).toHaveAttribute('href', '/');
   });
 
   it('다크모드 토글 버튼이 존재해야 함', () => {

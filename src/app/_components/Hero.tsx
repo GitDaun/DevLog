@@ -62,8 +62,8 @@ const Hero = () => {
           <h1 className="text-center text-2xl font-bold tracking-widest text-zinc-600 sm:text-3xl  dark:text-white ">
              FE {year - 2022}년차 개발자 정다운 입니다
           </h1>
-          <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I like animations 🤗
+          <p className="text-kor text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
+            어제보다 나은 오늘을 만들어갑니다.
           </p>
         </motion.div>
         <motion.div

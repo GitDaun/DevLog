@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { experienceData } from '@/assets/index.ts'
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion'
 import { useRef, useState } from 'react'
-import Swiper from './sub/Swiper'
+import Modal from './sub/Modal'
 
 const Experience = () => {
   const containerRef = useRef(null)
@@ -112,35 +112,9 @@ const Experience = () => {
         ></motion.div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {showModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setShowModal(false)}
-            className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50"
-          >
-            <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white dark:bg-zinc-800 p-8 rounded-lg w-[90%] max-w-4xl relative max-h-[85vh]"
-            >
-              <button 
-                onClick={() => setShowModal(false)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                aria-label="Close modal"
-              >
-                <i className="ri-close-line text-2xl"></i>
-              </button>
-              <div className="mt-4">
-                <Swiper />
-              </div>
-            </motion.div>
-          </motion.div>
+          <Modal onClose={() => setShowModal(false)} />
         )}
       </AnimatePresence>
     </div>
