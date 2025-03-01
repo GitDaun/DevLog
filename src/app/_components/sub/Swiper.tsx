@@ -14,8 +14,18 @@ const Swiper = () => {
           [--swiper-navigation-color:theme(colors.black)] dark:[--swiper-navigation-color:theme(colors.white)]
           [--swiper-pagination-color:theme(colors.black)] dark:[--swiper-pagination-color:theme(colors.white)]
           dark:[--swiper-pagination-fraction-color:theme(colors.black)]
+          [--swiper-navigation-size:1.25rem] sm:[--swiper-navigation-size:2rem]
+          [--swiper-navigation-sides-offset:1px] sm:[--swiper-navigation-sides-offset:5rem]
         "
-        spaceBetween={50}
+        spaceBetween={20}
+        breakpoints={{
+          320: {
+            spaceBetween: 20,
+          },
+          640: {
+            spaceBetween: 50,
+          }
+        }}
         virtual={true}
         pagination={{
           type: 'fraction',
@@ -27,7 +37,7 @@ const Swiper = () => {
       >
         {swiperData.map((slide, index) => (
           <SwiperSlide key={index} className="flex items-center justify-center">
-            <div className="relative w-full h-[37.5rem] sm:h-[43.75rem] flex items-center justify-center">
+            <div className="relative w-full h-[30rem] md:h-[43.75rem] flex items-center justify-center">
               <Image 
                 src={slide.imgPath}
                 alt={slide.title}

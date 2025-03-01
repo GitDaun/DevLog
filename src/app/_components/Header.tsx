@@ -2,29 +2,19 @@
 
 import { useState, useEffect } from 'react'   
 import { motion, AnimatePresence } from 'framer-motion'
+import clsx from 'clsx'
 
-import AboutMe from '@/assets/aboutMe.svg'
-import Blog from '@/assets/blog.svg'
-// import Portfolio from '@/assets/portfolio.svg'
 import DarkModeToggle from './sub/DarkModeToggle'
 import { usePreventScroll } from '@/hooks/usePreventScroll'
-import Button from './sub/Button'
+import { useSmoothScroll } from '@/hooks/useSmoothScroll'
+import { navbarData } from '@/assets/index'
 
-interface NavItem {
-  icon: any;
-  text: string;
-  href: string;
-}
+import Button from './sub/Button'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
-
-  const navItems: NavItem[] = [
-    { icon: AboutMe, text: 'About Me', href: '/' },
-    { icon: Blog, text: 'Blog', href: 'https://daunje0.tistory.com/' },
-    // { icon: Portfolio, text: 'Portfolio', href: '/' },
-  ];
+  const { scrollToElement } = useSmoothScroll();
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,11 +31,17 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  // 스크롤 이동과 메뉴 닫기를 함께 처리하는 핸들러
+  const handleScrollAndClose = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    setIsOpen(false);
+    scrollToElement(e, id);
+  };
+
   usePreventScroll(isOpen && isMobile);
 
   return (
-    <header className="relative z-50">
-      <div className="flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full pt-8 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50 px-4 py-2">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
         <nav className='relative flex-grow' >
           <AnimatePresence>
             {(isOpen || !isMobile) && (
@@ -65,23 +61,28 @@ export default function Header() {
                   bg-slate-100/95 dark:bg-black/95 dark:sm:bg-transparent sm:bg-transparent
                   flex flex-col items-center justify-center gap-10 z-50
                 `}
-               
               >
-                {navItems.map(({ icon: Icon, text, href }) => (
+                {navbarData.map((item, i) => (
                   <motion.div 
-                    key={text}
+                    key={item.id}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    <Icon className='size-6'/>
-                    <li>
-                      {/* <Link href={href}>{text}</Link> */}
-                      <a href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >{text}</a>
-                    </li>
+                    <a 
+                      href={`/#${item.id}`} 
+                      onClick={(e) => handleScrollAndClose(e, item.id)}
+                      className="flex flex-row items-center gap-x-2"
+                    >
+                      <i className={`${item.icon} text-3xl text-yellow-600 leading-none`}></i>
+                      <span className={clsx(
+                        'text-xl tracking-wide text-center dark:text-white leading-none',
+                        'transition-all duration-300',
+                        'sm:opacity-0 sm:group-hover:opacity-100 md:opacity-100'
+                      )}>
+                        {item.name}
+                      </span>
+                    </a>
                   </motion.div>
                 ))}
               </motion.ul>
@@ -115,6 +116,6 @@ export default function Header() {
           <DarkModeToggle />
         </div>
       </div>
-    </header> 
+    </header>
   )
 }

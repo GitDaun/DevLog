@@ -42,9 +42,14 @@ const Modal = ({ onClose }: ModalProps) => {
   return (
     <dialog
       ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image gallery modal"
+      data-testid="modal-dialog"
       className="fixed inset-0 bg-transparent p-0 border-none outline-none"
     >
       <motion.div
+        data-testid="modal-backdrop"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

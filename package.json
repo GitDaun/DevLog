@@ -14,7 +14,6 @@
     "coverage:ui": "vitest run --coverage && npx vite preview coverage"
   },
   "dependencies": {
-    "@svgr/webpack": "^8.1.0",
     "clsx": "^2.1.1",
     "motion": "^11.15.0",
     "next": "15.1.3",

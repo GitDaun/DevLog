@@ -146,6 +146,7 @@ export const skillsData = [
 ]
 // End of Skills
 
+// Swiper
 export const swiperData = [
   {
     imgPath: '/hanaCap/1.1.제조사선택.webp',
@@ -299,6 +300,33 @@ export const swiperData = [
     imgPath: '/hanaCap/hotdeal/2.5.견적서조회및다운로드.webp',
     title: '견적서 조회 및 다운로드',
   },
+
+]
+// End of Swiper
+
+
+// Navbar
+export const navbarData = [
+  {
+    id: 'home',
+    name: 'Home',
+    icon: 'ri-home-2-line',
+  },
+  {
+    id: 'about',
+    name: 'About',
+    icon: 'ri-question-line',
+  },
+  {
+    id: 'experience',
+    name: 'MyExp',
+    icon: 'ri-history-line',
+  },
+  {
+    id: 'skills',
+    name: 'Skills',
+    icon: 'ri-briefcase-line',
+  }
 
 ]
 

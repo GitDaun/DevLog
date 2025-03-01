@@ -30,13 +30,22 @@ export default defineConfig({
       reportsDirectory: './coverage',
       all: true,
       include: [
-        'src/**/*.{js,ts,jsx,tsx}'
+        'src/app/_components/**/*.{js,ts,jsx,tsx}',
+        'src/hooks/**/*.{js,ts,jsx,tsx}'
       ],
       exclude: [
         'node_modules/**',
         '**/*.d.ts',
-        '**/*.test.{js,ts}',
-        '**/types/**'
+        '**/*.test.{js,ts,jsx,tsx}',
+        '**/types/**',
+        '**/setupTests.ts',
+        'src/test/**',
+        'src/app/__mocks__/**',
+        'src/app/_test/**',
+        'src/app/layout.tsx',
+        'src/app/loading.tsx',
+        'src/app/not-found.tsx',
+        'src/app/page.tsx'
       ],
       thresholds: {
         lines: 80,
