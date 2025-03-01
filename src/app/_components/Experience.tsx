@@ -3,10 +3,12 @@ import Heading from './sub/Heading'
 import Image from 'next/image'
 import { experienceData } from '@/assets/index.ts'
 import { motion, useScroll, useSpring } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import Swiper from './sub/Swiper'
 
 const Experience = () => {
   const containerRef = useRef(null)
+  const [showModal, setShowModal] = useState(false)
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -39,7 +41,7 @@ const Experience = () => {
                 tracking-wide text-sm lg:text-base dark:bg-zinc-700 transition-colors z-20 ${
                 data.swaper ? 'cursor-pointer hover:scale-105' : ''
               }`}
-              onClick={data.swaper ? () => {alert('test')} : undefined}
+              onClick={data.swaper ? () => setShowModal(true) : undefined}
             >
               <h1 className="text-lg lg:text-xl font-light text-gray-700 dark:text-white">
                 {data.title}
@@ -109,6 +111,35 @@ const Experience = () => {
           className="absolute w-1 h-full rounded-full bg-gray-300 origin-top"
         ></motion.div>
       </div>
+
+      {showModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setShowModal(false)}
+          className="fixed inset-0 bg-white/30 backdrop-blur-sm flex items-center justify-center z-50"
+        >
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white dark:bg-zinc-800 p-8 rounded-lg w-[90%] max-w-4xl relative max-h-[85vh]"
+          >
+            <button 
+              onClick={() => setShowModal(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              aria-label="Close modal"
+            >
+              <i className="ri-close-line text-2xl"></i>
+            </button>
+            <div className="mt-4 ">
+              <Swiper />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   )
 }

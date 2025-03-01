@@ -1,5 +1,3 @@
-
-
 // About Me
 export const aboutText = {
   introduction: "안녕하세요. Vue.js, JavaScript 기반의 프로젝트를 진행해 온 3년차 프론트엔드 개발자 정다운 입니다.",
@@ -147,3 +145,160 @@ export const skillsData = [
   },
 ]
 // End of Skills
+
+export const swiperData = [
+  {
+    imgPath: '/hanaCap/1.1.제조사선택.webp',
+    title: '제조사 선택',
+  },
+  {
+    imgPath: '/hanaCap/1.2.검색창사용.webp',
+    title: '검색창 사용',
+  },
+  {
+    imgPath: '/hanaCap/1.3.검색차량리스트.webp',
+    title: '검색 차량 리스트',
+  },
+  {
+    imgPath: '/hanaCap/1.4.세부모델선택으로이동.webp',
+    title: '세부 모델 선택으로 이동',
+  },
+  {
+    imgPath: '/hanaCap/2.차종.webp',
+    title: '차종',
+  },
+  {
+    imgPath: '/hanaCap/3.0.미취급차량안내팝업.webp',
+    title: '미취급 차량 안내 팝업',
+  },
+  {
+    imgPath: '/hanaCap/3.1.세부모델선택전.webp',
+    title: '세부 모델 선택 전',
+  },
+  {
+    imgPath: '/hanaCap/3.2.세부모델.webp',
+    title: '세부 모델',
+  },
+  {
+    imgPath: '/hanaCap/3.3.세부모델선택후.webp',
+    title: '세부 모델 선택 후',
+  },
+  {
+    imgPath: '/hanaCap/4.0.옵션.webp',
+    title: '옵션',
+  },
+  {
+    imgPath: '/hanaCap/4.1.옵션_베타적옵션적용.webp',
+    title: '옵션 - 베타옵션 적용',
+  },
+  {
+    imgPath: '/hanaCap/4.2.1옵션_연계옵션_표시전.webp',
+    title: '옵션 - 연계 옵션 표시 전',
+  },
+  {
+    imgPath: '/hanaCap/4.2.2.옵션_연계옵션_알림팝업.webp',
+    title: '옵션 - 연계 옵션 알림 팝업',
+  },
+  {
+    imgPath: '/hanaCap/4.2.3.옵션_연계필수옵션_선택시_선택가능.webp',
+    title: '옵션 - 연계 필수 옵션 선택시 선택 가능',
+  },
+  {
+    imgPath: '/hanaCap/4.2.4.옵션_연계필수옵션_선택.webp',
+    title: '옵션 - 연계 필수 옵션 선택',
+  },
+  {
+    imgPath: '/hanaCap/5.1.색상_내외장색선택.webp',
+    title: '색상 - 내외장 색상 선택',
+  },
+  {
+    imgPath: '/hanaCap/5.2.내장색_선택시_제한사항_알림팝업.webp',
+    title: '내장색 선택시 제한사항 알림팝업',
+  },
+  {
+    imgPath: '/hanaCap/6.1.1.인터넷판매불가차량안내팝업.webp',
+    title: '인터넷 판매 불가 차량 안내 팝업',
+  },
+  {
+    imgPath: '/hanaCap/6.1.중간확인.webp',
+    title: '중간 확인',
+  },
+  {
+    imgPath: '/hanaCap/6.2.고객분류_분기팝업.webp',
+    title: '고객 분류 분기 팝업',
+  },
+  {
+    imgPath: '/hanaCap/7.1.개인정보입력.webp',
+    title: '개인정보 입력',
+  },
+  {
+    imgPath: '/hanaCap/7.2.1.사업자유효성검사.webp',
+    title: '사업자 유효성 검사',
+  },
+  {
+    imgPath: '/hanaCap/7.2.개인사업자및법인고객.webp',
+    title: '개인사업자 및 법인 고객',
+  },
+  {
+    imgPath: '/hanaCap/8.1.1.운용리스_견적조건선택1.webp',
+    title: '운용리스 - 견적 조건 선택 1',
+  },
+  {
+    imgPath: '/hanaCap/8.1.2.운용리스_견적조건선택2.webp',
+    title: '운용리스 - 견적 조건 선택 2',
+  },
+  {
+    imgPath: '/hanaCap/8.1.3.운용리스_견적조건선택3.webp',
+    title: '운용리스 - 견적 조건 선택 3',
+  },
+  {
+    imgPath: '/hanaCap/8.2.1.금융리스_견적조건선택1.webp',
+    title: '금융리스 - 견적 조건 선택 1',
+  },
+  {
+    imgPath: '/hanaCap/8.2.2.금융리스_견적조건선택2.webp',
+    title: '금융리스 - 견적 조건 선택 2',
+  },
+  {
+    imgPath: '/hanaCap/20.신용조회정보동의.webp',
+    title: '신용조회 정보 동의',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/1.핫딜메인.webp',
+    title: '핫딜 메인',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.1.견적조건확인1.webp',
+    title: '견적 조건 확인 1',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.2.견적조건확인2.webp',
+    title: '견적 조건 확인 2',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.3.1.견적조건확인3.webp',
+    title: '견적 조건 확인 3',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.3.2.보험내용변경.webp',
+    title: '보험 내용 변경 3',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.3.3.잔존가치비율변경.webp',
+    title: '잔존 가치 비율 변경',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.4.2.탁송지선택.webp',
+    title: '탁송지 선택',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.4.견적조건확인4.webp',
+    title: '견적 조건 확인 4',
+  },
+  {
+    imgPath: '/hanaCap/hotdeal/2.5.견적서조회및다운로드.webp',
+    title: '견적서 조회 및 다운로드',
+  },
+
+]
+
