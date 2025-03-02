@@ -87,9 +87,10 @@ export const experienceData = [
       '기여도 :  100%'
     ],
     achievements: [
-      '하나 캐피탈 프로젝트에서 얻은 경험을 바탕으로 이미지 포맷을 png에서 webp로 전환하여 이미지 리소스 크기를 71.45% (1.66MB -> 474KB) 압축했습니다. 초기 로딩 속도 개선, 사용자 경험 향상, 트래픽 비용 절감 효과를 기대했습니다.',
+      'CLS(Cumulative Layout Shift) 최적화: 0.377 -> 0.002 로 99.47% 개선 했습니다',
       '핵심 로직 및 컴포넌트에 대한 단위 테스트를 통해 코드 커버리지 90.76%를 달성했습니다.',
       '다양한 해상도 및 화면 크기에서 테스트를 진행하여 반응형 디자인의 일관성을 확보했습니다. ( 테스크탑  6종,  테블릿 2종,  모바일 3종)',
+      '하나 캐피탈 프로젝트에서 얻은 경험을 바탕으로 이미지 포맷을 png에서 webp로 전환하여 이미지 리소스 크기를 71.45% (1.66MB -> 474KB) 압축했습니다. 초기 로딩 속도 개선, 사용자 경험 향상, 트래픽 비용 절감 효과를 기대했습니다.',
       '테일윈드 4버전 도입하여 빌드 파일 크기 감소, 빠른 빌드 속도, 트리 쉐이킹 등 성능 최적화를 통해 개발 효율성을 높였습니다.',
     ],
     skills:[`${CLOUDINARY_URL}/v1740925954/NextJS_jixktq.webp`, `${CLOUDINARY_URL}/v1740925960/TypeScript_qigrtt.svg`, `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`, `${CLOUDINARY_URL}/v1740925959/TailWind_pxzf60.svg`, `${CLOUDINARY_URL}/v1740925956/FramerMotion_xputuu.webp`],
