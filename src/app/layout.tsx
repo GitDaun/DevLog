@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { Sour_Gummy } from "next/font/google";
 import { ThemeProvider } from 'next-themes'
-
 import "./globals.css";
-
 
 const sourGummy = Sour_Gummy({
   subsets: ['latin', 'latin-ext'],
   variable: "--font-sour-gummy",
 });
-
 
 export const metadata: Metadata = {
   title: "Devlog of Daun",
@@ -31,8 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+      </head>
       <body className={`${sourGummy.variable} antialiased p-4 bg-white dark:bg-gray-900 dark:text-white`} suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

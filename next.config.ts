@@ -8,6 +8,10 @@ const nextConfig = {
       }
     }
   },
+  images: {
+    domains: ['cdn.jsdelivr.net'],
+    unoptimized: true
+  },
   webpack: (config: any) => {
     return {
       ...config,
