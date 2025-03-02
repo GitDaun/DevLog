@@ -48,7 +48,7 @@ const Experience = () => {
               </h1>
               <div className="text-kor text-gray-800 dark:text-gray-100">
                <span className="block font-light">주요 성과:</span>  
-                <ul className="pl-2 ">
+                <ul className="pl-5 pb-5 list-disc marker:text-gray-800 dark:marker:text-gray-200">
                   {data.achievements.map((exp, j) => (
                     <li key={j} className="my-1 font-extralight">
                       {exp}
@@ -58,7 +58,7 @@ const Experience = () => {
               </div>
               <div className="text-kor text-gray-800 dark:text-gray-200 transition-colors">
                 <span className="font-light">주요 업무:</span>
-                <ul className="pl-2 ">
+                <ul className="pl-5 pb-5 list-disc marker:text-gray-800 dark:marker:text-gray-200">
                   {data.works.map((exp, j) => (
                     <li key={j} className="my-1 font-extralight">
                       {exp}

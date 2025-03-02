@@ -1,6 +1,6 @@
 // About Me
 export const aboutText = {
-  introduction: "안녕하세요. Vue.js, JavaScript 기반의 프로젝트를 진행해 온 3년차 프론트엔드 개발자 정다운 입니다.",
+  introduction: "안녕하세요. 누구보다 책임감 있게 업무를 대하는 3년차 프론트엔드 개발자 정다운 입니다.",
   experience: "SI 프로젝트 현장 경험을 통해 협업 능력과 이슈 처리 능력을 키웠습니다.",
   learning: "이전 경력에서 접하기 어려웠던 React, Next.js, TypeScript 등의 기술 스택을 학습하고 적용하기 위해 개인 프로젝트를 진행하고 있습니다.",
   blog: "또한, Medium, ByteByteGo, daily.dev 등 기술 블로그 번역을 통해 꾸준히 새로운 개발 트렌드를 학습하고 있습니다.",
@@ -63,8 +63,10 @@ export const experienceData = [
       '기여도 :  100%'
     ],
     achievements: [
-      'NextJS, TypeScript, TailwindCSS, Framer Motion, Vitest 기술 스택 학습 및 적용',
-      '개인 소개 페이지 개발',
+      '하나 캐피탈 프로젝트에서 얻은 경험을 바탕으로 이미지 포맷을 png에서 webp로 전환하여 이미지 리소스 크기를 71.45% (1.66MB -> 474KB) 압축했습니다. 초기 로딩 속도 개선, 사용자 경험 향상, 트래픽 비용 절감 효과를 기대했습니다.',
+      '핵심 로직 및 컴포넌트에 대한 단위 테스트를 통해 코드 커버리지 90.76%를 달성했습니다.',
+      '다양한 해상도 및 화면 크기에서 테스트를 진행하여 반응형 디자인의 일관성을 확보했습니다. ( 테스크탑  6종,  테블릿 2종,  모바일 3종)',
+      '테일윈드 4버전 도입하여 빌드 파일 크기 감소, 빠른 빌드 속도, 트리 쉐이킹 등 성능 최적화를 통해 개발 효율성을 높였습니다.',
     ],
     skills:['/NextJS.webp', '/TypeScript.svg', '/GitHub.svg', '/TailWind.svg', '/FramerMotion.webp', '/Vitest.svg'],
     swaper: false
