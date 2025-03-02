@@ -6,6 +6,7 @@ import "./globals.css";
 
 
 const sourGummy = Sour_Gummy({
+  subsets: ['latin', 'latin-ext'],
   variable: "--font-sour-gummy",
 });
 
