@@ -3,8 +3,12 @@
 import Heading from '@/app/_components/sub/Heading'
 import Image from 'next/image'
 import { aboutText } from '@/assets/index'
+import { useState } from 'react'
+
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
     <div 
       id="about" 
@@ -13,19 +17,33 @@ const About = () => {
     >
       <Heading text={'About Me'} />
       <div className="w-full flex items-center justify-center sm:justify-center sm:gap-x-20">
-        <Image
-          src={'/myPhoto.webp'}
-          alt="About Image"
-          width={300}
-          height={300}
-          className="xl:w-[200px] lg:w-[150px]  hidden lg:block rounded-sm"
-        />
-        <div className="relative max-w-[800px] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 transition-colors">
+        <div className="hidden xl:block w-[150px] xl:w-[200px] aspect-[4/5] relative">
+          <Image
+            src={'/myPhoto.webp'}
+            alt="About Image"
+            fill
+            sizes="(max-width: 1024px) 150px, 200px"
+            priority
+            quality={70}
+            className={`
+              ${isLoading ? 'invisible' : 'visible'}
+              object-cover rounded-sm
+              transition-opacity duration-300
+            `}
+            onLoad={() => setIsLoading(false)}
+          />
+          {isLoading && (
+            <div 
+              className="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-sm"
+              aria-hidden="true"
+            />
+          )}
+        </div>
+        <div className="relative max-w-[800px] min-h-[200px] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 transition-colors">
           <span className="absolute -left-5 top-1/2 -translate-y-1/2 scale-[2.5] text-zinc-100 hidden sm:block dark:text-zinc-700 transition-colors">
             <i className="ri-arrow-left-s-fill"></i>
           </span>
           <p className="text-kor leading-10 font-normal text-gray-700  text-sm lg:text-base  dark:text-white">
-            {/* {aboutText} */}
             {aboutText && (
               <>
                 {aboutText.introduction}<br/>
