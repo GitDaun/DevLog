@@ -1,28 +1,21 @@
-import type { NextConfig } from "next";
-import svgr from 'vite-plugin-svgr'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack']
-    });
-    return config;
-  },
-  compiler: {
-    styledComponents: true
-  },
   experimental: {
     turbo: {
       rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.tsx'
-        }
+        // Tailwind CSS v4 Oxide 엔진 설정
+        '*.{js,ts,jsx,tsx}': ['@tailwindcss/postcss']
       }
     }
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@tailwindcss/oxide': '@tailwindcss/oxide-linux-x64-gnu'
+    };
+    return config;
   }
 };
 
-export default nextConfig;
+export default nextConfig; 
