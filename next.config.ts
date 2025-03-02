@@ -1,21 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = {
-  experimental: {
-    turbo: {
-      rules: {
-        '*.{js,ts,jsx,tsx}': ['@tailwindcss/postcss']
-      }
-    }
-  },
+
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.jsdelivr.net',
-        pathname: '**',
-      }
-    ],
+    unoptimized: true,
     dangerouslyAllowSVG: true,
   },
   webpack: (config: any) => {

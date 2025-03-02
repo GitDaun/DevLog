@@ -28,9 +28,9 @@ const SnowFlowerFall = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [particles, setParticles] = useState<Particle[]>([])
   const [mounted, setMounted] = useState(false)
 
-
   useEffect(() => {
     setMounted(true)
+    return () => setMounted(false)
   }, [])
 
   // 다크모드 감지 및 파티클 초기화
@@ -40,6 +40,8 @@ const SnowFlowerFall = ({ isDarkMode }: { isDarkMode: boolean }) => {
   }, [isDarkMode, mounted])
 
   useEffect(() => {
+    if (!mounted) return
+    
     // 새로운 파티클(눈/꽃잎)을 생성하는 함수
     const createParticle = () => {
       const particle = {
@@ -64,7 +66,7 @@ const SnowFlowerFall = ({ isDarkMode }: { isDarkMode: boolean }) => {
     
     // 컴포넌트 언마운트 또는 isDarkMode 변경 시 인터벌 정리
     return () => clearInterval(interval)
-  }, [isDarkMode])  // isDarkMode 변경 시 효과 재실행
+  }, [isDarkMode, mounted])
 
   if (!mounted) return null
 

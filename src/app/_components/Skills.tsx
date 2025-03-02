@@ -43,8 +43,9 @@ const Skills = () => {
             <Image
               src={item.icon}
               alt={`${item.name} icon`}
-              width={100}
-              height={100}
+              width={40}
+              height={40}
+              priority={i < 4}
               className="h-auto w-[30px] sm:w-[35px] lg:w-[40px]"
             />
             <p className="text-xs sm:text-sm text-gray-600">{item.name}</p>

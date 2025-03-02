@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
       </head>
       <body className={`${sourGummy.variable} antialiased p-4 bg-white dark:bg-gray-900 dark:text-white`} suppressHydrationWarning>
