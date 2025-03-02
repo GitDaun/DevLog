@@ -76,7 +76,6 @@ export const experienceData = [
 
 // Skills
 export const skillsData = [
-
   {
     name: 'HTML',
     icon: '/HTML.svg',
@@ -111,11 +110,11 @@ export const skillsData = [
   },
   {
     name: 'Vitest',
-    icon: '/Vitest.svg',
+    icon: '/vitest.svg',
   },
-    {
+  {
     name: 'Figma',
-    icon: '/Figma.svg',
+    icon: '/figma.svg',
   },
   {
     name: 'Photoshop',
@@ -139,7 +138,7 @@ export const skillsData = [
   },
   {
     name: 'PostgreSQL',
-    icon: '/PostgreSQL.svg',
+    icon: '/Postgresql.svg',
   },
   {
     name: 'Github',

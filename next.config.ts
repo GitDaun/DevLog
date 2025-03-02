@@ -9,8 +9,14 @@ const nextConfig = {
     }
   },
   images: {
-    domains: ['cdn.jsdelivr.net'],
-    unoptimized: true
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        pathname: '**',
+      }
+    ],
+    dangerouslyAllowSVG: true,
   },
   webpack: (config: any) => {
     return {
