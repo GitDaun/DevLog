@@ -1,12 +1,17 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = {
-
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/dm4xbk7hh/image/upload/**',
+      }
+    ],
     dangerouslyAllowSVG: true,
   },
-  webpack: (config: any) => {
+  webpack: (config) => {
     return {
       ...config,
       resolve: {

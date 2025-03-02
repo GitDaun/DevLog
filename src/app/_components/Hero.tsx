@@ -5,6 +5,7 @@ import { useState } from 'react'
 import FallingEffectComponent from './sub/SnowFlowerfall'
 import { useImageMotion } from '@/hooks/useImageMotion'
 import { useDarkMode } from '@/hooks/useDarkMode'
+import { heroData } from '@/assets/index'
 
 const Hero = () => {
   const year = new Date().getFullYear()
@@ -39,7 +40,7 @@ const Hero = () => {
             }}
           >
             <Image
-              src={'/person1.webp'}
+              src={heroData.imgPath}
               alt="Person Image"
               width={400}
               height={400}

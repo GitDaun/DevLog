@@ -79,7 +79,7 @@ const Experience = () => {
                         className="hover:scale-120 transition-transform "
                       />
                       <span className="tooltip-skill-bottom">
-                        {skill.split('/').pop()?.split('.')[0]}
+                        {skill.split('/').pop()?.split('_')[0]}
                       </span>
                     </li>
                   ))}

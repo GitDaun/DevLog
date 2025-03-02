@@ -19,7 +19,7 @@ const About = () => {
       <div className="w-full flex items-center justify-center sm:justify-center sm:gap-x-20">
         <div className="hidden xl:block w-[150px] xl:w-[200px] aspect-[4/5] relative">
           <Image
-            src={'/myPhoto.webp'}
+            src={aboutText.myPhoto}
             alt="About Image"
             fill
             sizes="(max-width: 1024px) 150px, 200px"

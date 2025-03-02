@@ -1,4 +1,5 @@
-const CLOUDINARY_URL = 'https://res.cloudinary.com/dm4xbk7hh/image/upload'
+// 공통 URL 경로 상수 정의
+const CLOUDINARY_URL = 'https://res.cloudinary.com/dm4xbk7hh/image/upload';
 
 // Hero
 export const heroData = {
@@ -32,7 +33,12 @@ export const experienceData = [
       '하나캐피탈 코어 서비스인 차량 렌트/리스/핫딜 서비스 화면 개발',
       
     ],
-    skills:[`${CLOUDINARY_URL}/v1740925960/Vue_trrivg.svg`, `${CLOUDINARY_URL}/v1740925956/Pinia_xnf3na.svg`, `${CLOUDINARY_URL}/v1740925957/JavaScript_lsbtip.svg`, `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`],
+    skills:[
+      `${CLOUDINARY_URL}/v1740925960/Vue_trrivg.svg`, 
+      `${CLOUDINARY_URL}/v1740925956/Pinia_xnf3na.svg`,
+      `${CLOUDINARY_URL}/v1740925957/JavaScript_lsbtip.svg`, 
+      `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`
+    ],
     swaper: true
   },
   {
@@ -47,11 +53,16 @@ export const experienceData = [
       
       '공통 컴포넌트 지원 작업 병행으로 Atomic 디자인 참여',
     ],
-    skills:[`${CLOUDINARY_URL}/v1740925960/Vue_trrivg.svg`, `${CLOUDINARY_URL}/v1740925956/Pinia_xnf3na.svg`, `${CLOUDINARY_URL}/v1740925957/JavaScript_lsbtip.svg`, `${CLOUDINARY_URL}/v1740925954/AgGrid_piv5g2.png`,
-     `${CLOUDINARY_URL}/v1740925956/Jira_qei6zs.svg`,
-      `${CLOUDINARY_URL}/v1740925954/Confluence_zfix4a.svg`, 
+    skills: [
+      `${CLOUDINARY_URL}/v1740925960/Vue_trrivg.svg`,
+      `${CLOUDINARY_URL}/v1740925956/Pinia_xnf3na.svg`,
+      `${CLOUDINARY_URL}/v1740925957/JavaScript_lsbtip.svg`,
+      `${CLOUDINARY_URL}/v1740925954/AgGrid_piv5g2.png`,
+      `${CLOUDINARY_URL}/v1740925956/Jira_qei6zs.svg`,
+      `${CLOUDINARY_URL}/v1740925954/Confluence_zfix4a.svg`,
       `${CLOUDINARY_URL}/v1740925954/BitBucket_qqywqa.svg`,
-       `${CLOUDINARY_URL}/v1740925959/StoryBook_eze4qq.svg`],
+      `${CLOUDINARY_URL}/v1740925959/StoryBook_eze4qq.svg`
+    ],
     swaper: false
   },
   {
@@ -67,17 +78,17 @@ export const experienceData = [
       '팀 개발자들이 사용할 공통 함수, 컴포넌트, 프로시져, 스케쥴러 작성',
       'AG-Grid 엑셀 다운로드, 그리드 필터링 관련 및 타 개발팀의 MySQL 연동 프로시져, 이벤트 스케쥴러 작성',
     ],
-    skills:[
+    skills: [
       `${CLOUDINARY_URL}/v1740925960/Vue_trrivg.svg`,
-      `${CLOUDINARY_URL}/v1740925960/TypeScript_qigrtt.svg`, 
+      `${CLOUDINARY_URL}/v1740925960/TypeScript_qigrtt.svg`,
       `${CLOUDINARY_URL}/v1740925956/Pinia_xnf3na.svg`,
-      `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`, 
-      `${CLOUDINARY_URL}/v1740925959/TailWind_pxzf60.svg`, 
+      `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`,
+      `${CLOUDINARY_URL}/v1740925959/TailWind_pxzf60.svg`,
       `${CLOUDINARY_URL}/v1740925954/AgGrid_piv5g2.png`,
-      `${CLOUDINARY_URL}/v1740925956/Java_pzpggs.svg`, 
-      `${CLOUDINARY_URL}/v1740925959/SpringBoot_jqjql1.svg`, 
+      `${CLOUDINARY_URL}/v1740925956/Java_pzpggs.svg`,
+      `${CLOUDINARY_URL}/v1740925959/SpringBoot_jqjql1.svg`,
       `${CLOUDINARY_URL}/v1740925954/MySQL_rkqcfz.svg`
-      ],
+    ],
     swaper: false
   },
   {
@@ -92,7 +103,13 @@ export const experienceData = [
       '다양한 해상도 및 화면 크기에서 테스트를 진행하여 반응형 디자인의 일관성을 확보했습니다. ( 테스크탑  6종,  테블릿 2종,  모바일 3종)',
       '테일윈드 4버전 도입하여 빌드 파일 크기 감소, 빠른 빌드 속도, 트리 쉐이킹 등 성능 최적화를 통해 개발 효율성을 높였습니다.',
     ],
-    skills:[`${CLOUDINARY_URL}/v1740925954/NextJS_jixktq.webp`, `${CLOUDINARY_URL}/v1740925960/TypeScript_qigrtt.svg`, `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`, `${CLOUDINARY_URL}/v1740925959/TailWind_pxzf60.svg`, `${CLOUDINARY_URL}/v1740925956/FramerMotion_xputuu.webp`],
+    skills: [
+      `${CLOUDINARY_URL}/v1740925954/NextJS_jixktq.webp`,
+      `${CLOUDINARY_URL}/v1740925960/TypeScript_qigrtt.svg`,
+      `${CLOUDINARY_URL}/v1740925956/GitHub_qxcyym.svg`,
+      `${CLOUDINARY_URL}/v1740925959/TailWind_pxzf60.svg`,
+      `${CLOUDINARY_URL}/v1740925956/FramerMotion_xputuu.webp`
+    ],
     swaper: false
   },
 ]
@@ -176,154 +193,153 @@ export const skillsData = [
 ]
 // End of Skills
 
-// Swiper
 export const swiperData = [
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928394/1.1.%EC%A0%9C%EC%A1%B0%EC%82%AC%EC%84%A0%ED%83%9D_qr80ex.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928394/1.1.제조사선택_qr80ex.webp`,
     title: '제조사 선택',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928394/1.2.%EA%B2%80%EC%83%89%EC%B0%BD%EC%82%AC%EC%9A%A9_vcxpni.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928394/1.2.검색창사용_vcxpni.webp`,
     title: '검색창 사용',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928394/1.3.%EA%B2%80%EC%83%89%EC%B0%A8%EB%9F%89%EB%A6%AC%EC%8A%A4%ED%8A%B8_sd84lh.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928394/1.3.검색차량리스트_sd84lh.webp`,
     title: '검색 차량 리스트',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928394/1.4.%EC%84%B8%EB%B6%80%EB%AA%A8%EB%8D%B8%EC%84%A0%ED%83%9D%EC%9C%BC%EB%A1%9C%EC%9D%B4%EB%8F%99_bnpbgj.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928394/1.4.세부모델선택으로이동_bnpbgj.webp`,
     title: '세부 모델 선택으로 이동',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928395/2.%EC%B0%A8%EC%A2%85_titml9.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928395/2.차종_titml9.webp`,
     title: '차종',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928395/3.0.%EB%AF%B8%EC%B7%A8%EA%B8%89%EC%B0%A8%EB%9F%89%EC%95%88%EB%82%B4%ED%8C%9D%EC%97%85_paq0eg.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928395/3.0.미취급차량안내팝업_paq0eg.webp`,
     title: '미취급 차량 안내 팝업',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928396/3.1.%EC%84%B8%EB%B6%80%EB%AA%A8%EB%8D%B8%EC%84%A0%ED%83%9D%EC%A0%84_r0yhdb.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928396/3.1.세부모델선택전_r0yhdb.webp`,
     title: '세부 모델 선택 전',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928396/3.2.%EC%84%B8%EB%B6%80%EB%AA%A8%EB%8D%B8_vmx0ez.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928396/3.2.세부모델_vmx0ez.webp`,
     title: '세부 모델',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928397/3.3.%EC%84%B8%EB%B6%80%EB%AA%A8%EB%8D%B8%EC%84%A0%ED%83%9D%ED%9B%84_zrc3wb.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928397/3.3.세부모델선택후_zrc3wb.webp`,
     title: '세부 모델 선택 후',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928398/4.0.%EC%98%B5%EC%85%98_oxgois.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928398/4.0.옵션_oxgois.webp`,
     title: '옵션',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928398/4.1.%EC%98%B5%EC%85%98_%EB%B2%A0%ED%83%80%EC%A0%81%EC%98%B5%EC%85%98%EC%A0%81%EC%9A%A9_mfcaul.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928398/4.1.옵션_베타옵션적용_mfcaul.webp`,
     title: '옵션 - 베타옵션 적용',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928399/4.2.1%EC%98%B5%EC%85%98_%EC%97%B0%EA%B3%84%EC%98%B5%EC%85%98_%ED%91%9C%EC%8B%9C%EC%A0%84_lypbja.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928399/4.2.1옵션_연계옵션표시전_lypbja.webp`,
     title: '옵션 - 연계 옵션 표시 전',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928400/4.2.2.%EC%98%B5%EC%85%98_%EC%97%B0%EA%B3%84%EC%98%B5%EC%85%98_%EC%95%8C%EB%A6%BC%ED%8C%9D%EC%97%85_dykqkg.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928400/4.2.2.옵션_연계옵션알림팝업_dykqkg.webp`,
     title: '옵션 - 연계 옵션 알림 팝업',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928400/4.2.3.%EC%98%B5%EC%85%98_%EC%97%B0%EA%B3%84%ED%95%84%EC%88%98%EC%98%B5%EC%85%98_%EC%84%A0%ED%83%9D%EC%8B%9C_%EC%84%A0%ED%83%9D%EA%B0%80%EB%8A%A5_i8zxmu.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928400/4.2.3.옵션_연계필수옵션선택시선택가능_i8zxmu.webp`,
     title: '옵션 - 연계 필수 옵션 선택시 선택 가능',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928401/4.2.4.%EC%98%B5%EC%85%98_%EC%97%B0%EA%B3%84%ED%95%84%EC%88%98%EC%98%B5%EC%85%98_%EC%84%A0%ED%83%9D_xriec9.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928401/4.2.4.옵션_연계필수옵션선택_xriec9.webp`,
     title: '옵션 - 연계 필수 옵션 선택',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928402/5.1.%EC%83%89%EC%83%81_%EB%82%B4%EC%99%B8%EC%9E%A5%EC%83%89%EC%84%A0%ED%83%9D_domycd.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928402/5.1.색상_내외장색상선택_domycd.webp`,
     title: '색상 - 내외장 색상 선택',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928402/5.2.%EB%82%B4%EC%9E%A5%EC%83%89_%EC%84%A0%ED%83%9D%EC%8B%9C_%EC%A0%9C%ED%95%9C%EC%82%AC%ED%95%AD_%EC%95%8C%EB%A6%BC%ED%8C%9D%EC%97%85_qdycsj.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928402/5.2.내장색선택시제한사항알림팝업_qdycsj.webp`,
     title: '내장색 선택시 제한사항 알림팝업',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928405/6.1.%EC%A4%91%EA%B0%84%ED%99%95%EC%9D%B8_brwwtt.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928405/6.1.중간확인_brwwtt.webp`,
     title: '중간 확인',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928404/6.1.1.%EC%9D%B8%ED%84%B0%EB%84%B7%ED%8C%90%EB%A7%A4%EB%B6%88%EA%B0%80%EC%B0%A8%EB%9F%89%EC%95%88%EB%82%B4%ED%8C%9D%EC%97%85_eati0r.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928404/6.1.1.인터넷판매불가차량안내팝업_eati0r.webp`,
     title: '인터넷 판매 불가 차량 안내 팝업',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928405/6.2.%EA%B3%A0%EA%B0%9D%EB%B6%84%EB%A5%98_%EB%B6%84%EA%B8%B0%ED%8C%9D%EC%97%85_hedq8p.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928405/6.2.고객분류분기팝업_hedq8p.webp`,
     title: '고객 분류 분기 팝업',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928405/7.1.%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EC%9E%85%EB%A0%A5_h8xxft.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928405/7.1.개인정보입력_h8xxft.webp`,
     title: '개인정보 입력',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928408/7.2.%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%97%85%EC%9E%90%EB%B0%8F%EB%B2%95%EC%9D%B8%EA%B3%A0%EA%B0%9D_nct8zg.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928408/7.2.개인사업자및법인고객_nct8zg.webp`,
     title: '개인사업자 및 법인 고객',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928408/7.2.1.%EC%82%AC%EC%97%85%EC%9E%90%EC%9C%A0%ED%9A%A8%EC%84%B1%EA%B2%80%EC%82%AC_r2uheg.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928408/7.2.1.사업자유효성검사_r2uheg.webp`,
     title: '사업자 유효성 검사',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928409/8.1.1.%EC%9A%B4%EC%9A%A9%EB%A6%AC%EC%8A%A4_%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%EC%84%A0%ED%83%9D1_mnqtrq.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928409/8.1.1.운용리스_견적조건선택1_mnqtrq.webp`,
     title: '운용리스 - 견적 조건 선택 1',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928409/8.1.2.%EC%9A%B4%EC%9A%A9%EB%A6%AC%EC%8A%A4_%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%EC%84%A0%ED%83%9D2_qbkbd5.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928409/8.1.2.운용리스_견적조건선택2_qbkbd5.webp`,
     title: '운용리스 - 견적 조건 선택 2',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928412/8.1.3.%EC%9A%B4%EC%9A%A9%EB%A6%AC%EC%8A%A4_%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%EC%84%A0%ED%83%9D3_pedkxi.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928412/8.1.3.운용리스_견적조건선택3_pedkxi.webp`,
     title: '운용리스 - 견적 조건 선택 3',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928412/8.2.1.%EA%B8%88%EC%9C%B5%EB%A6%AC%EC%8A%A4_%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%EC%84%A0%ED%83%9D1_mcvgll.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928412/8.2.1.금융리스_견적조건선택1_mcvgll.webp`,
     title: '금융리스 - 견적 조건 선택 1',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928412/8.2.2.%EA%B8%88%EC%9C%B5%EB%A6%AC%EC%8A%A4_%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%EC%84%A0%ED%83%9D2_nsislb.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928412/8.2.2.금융리스_견적조건선택2_nsislb.webp`,
     title: '금융리스 - 견적 조건 선택 2',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928496/1.%ED%95%AB%EB%94%9C%EB%A9%94%EC%9D%B8_oeweuy.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928496/1.핫딜메인_oeweuy.webp`,
     title: '핫딜 메인',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928496/2.1.%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%ED%99%95%EC%9D%B81_f0ru0i.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928496/2.1.견적조건확인1_f0ru0i.webp`,
     title: '견적 조건 확인 1',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928497/2.2.%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%ED%99%95%EC%9D%B82_wegxgw.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928497/2.2.견적조건확인2_wegxgw.webp`,
     title: '견적 조건 확인 2',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928498/2.3.1.%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%ED%99%95%EC%9D%B83_dbwg1b.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928498/2.3.1.견적조건확인3_dbwg1b.webp`,
     title: '견적 조건 확인 3',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928500/2.3.2.%EB%B3%B4%ED%97%98%EB%82%B4%EC%9A%A9%EB%B3%80%EA%B2%BD_urjcps.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928500/2.3.2.보험내용변경3_urjcps.webp`,
     title: '보험 내용 변경 3',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928500/2.3.3.%EC%9E%94%EC%A1%B4%EA%B0%80%EC%B9%98%EB%B9%84%EC%9C%A8%EB%B3%80%EA%B2%BD_elu3sp.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928500/2.3.3.잔존가치비율변경_elu3sp.webp`,
     title: '잔존 가치 비율 변경',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928502/2.4.2.%ED%83%81%EC%86%A1%EC%A7%80%EC%84%A0%ED%83%9D_gq6sln.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928502/2.4.2.탁송지선택_gq6sln.webp`,
     title: '탁송지 선택',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928502/2.4.%EA%B2%AC%EC%A0%81%EC%A1%B0%EA%B1%B4%ED%99%95%EC%9D%B84_fdly4l.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928502/2.4.견적조건확인4_fdly4l.webp`,
     title: '견적 조건 확인 4',
   },
   {
-    imgPath: `${CLOUDINARY_URL}/v1740928504/2.5.%EA%B2%AC%EC%A0%81%EC%84%9C%EC%A1%B0%ED%9A%8C%EB%B0%8F%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C_jfwrlk.webp`,
+    imgPath: `${CLOUDINARY_URL}/v1740928504/2.5.견적서조회및다운로드_jfwrlk.webp`,
     title: '견적서 조회 및 다운로드',
   },
 
