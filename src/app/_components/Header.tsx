@@ -62,7 +62,7 @@ export default function Header() {
                   flex flex-col items-center justify-center gap-10 z-50
                 `}
               >
-                {navbarData.map((item, i) => (
+                {navbarData.map((item) => (
                   <motion.div 
                     key={item.id}
                     whileHover={{ scale: 1.2 }}

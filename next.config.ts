@@ -1,21 +1,25 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   experimental: {
     turbo: {
       rules: {
-        // Tailwind CSS v4 Oxide 엔진 설정
         '*.{js,ts,jsx,tsx}': ['@tailwindcss/postcss']
       }
     }
   },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@tailwindcss/oxide': '@tailwindcss/oxide-linux-x64-gnu'
+  webpack: (config: any) => {
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve?.alias,
+          '@tailwindcss/oxide': '@tailwindcss/oxide-linux-x64-gnu'
+        }
+      }
     };
-    return config;
   }
-};
+} satisfies NextConfig;
 
 export default nextConfig; 
