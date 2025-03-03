@@ -41,9 +41,9 @@ const DarkModeToggle = () => {
             transition={{ duration: 0.2 }}
             className={`text-2xl ${
               theme === 'dark' 
-                ? 'ri-sun-line text-amber-300' 
-                : 'ri-moon-foggy-fill text-amber-500'
-            }`}
+                ? 'ri-sun-line text-amber-300 dark:text-amber-300' 
+                : 'ri-moon-foggy-fill text-amber-500 dark:text-amber-500'
+            } transition-colors`}
           />
         </AnimatePresence>
       </motion.button>
