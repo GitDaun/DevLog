@@ -94,7 +94,7 @@ const Experience = () => {
               </span>
             </motion.div>
             <div
-              className={`w-14 absolute top-1/2 border border-gray-300 rounded-full aspect-square grid place-items-center text-red-400 font-light -translate-y-1/2 z-10 bg-white ${
+              className={`w-14 absolute top-1/2 border border-gray-300 rounded-full aspect-square grid place-items-center text-red-400 font-light -translate-y-1/2 z-10 bg-white dark:bg-zinc-700 dark:border-gray-600 ${
                 i % 2 === 0
                   ? 'left-1/2 lg:left-full lg:-translate-x-1/2'
                   : 'right-1/2 lg:right-full lg:translate-x-1/2'
