@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import About from '../_components/About';
+import About from '../../_components/About';
 
 // Next/Image 모킹
 vi.mock('next/image', () => ({
@@ -30,6 +30,6 @@ describe('About 컴포넌트', () => {
   it('프로필 이미지가 올바르게 렌더링되어야 함', () => {
     const image = screen.getByAltText('About Image');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', '/myPhoto.webp');
+    expect(image).toHaveAttribute('src', 'https://res.cloudinary.com/dm4xbk7hh/image/upload/v1740925958/myPhoto_wqts4w.webp');
   });
 });

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Skills from '../_components/Skills';
+import Skills from '../../_components/Skills';
 import { skillsData } from '@/assets/index.ts';
 import { vi } from 'vitest';
 

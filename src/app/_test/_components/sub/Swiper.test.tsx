@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
-import Swiper from '../../_components/sub/Swiper'
+import Swiper from '../../../_components/sub/Swiper'
 import { swiperData } from '@/assets/index.ts'
 
 // Swiper 관련 모듈 모킹

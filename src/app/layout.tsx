@@ -10,8 +10,8 @@ const sourGummy = Sour_Gummy({
 });
 
 export const metadata: Metadata = {
-  title: "Devlog of Daun",
-  description: "FE 정다운의 개발 블로그",
+  title: "Daun's Portfolio",
+  description: "FE개발자 정다운의 자기 소개 페이지 입니다.",
   icons: {
     icon: [
       {

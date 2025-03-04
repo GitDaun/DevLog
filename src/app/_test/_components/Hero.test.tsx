@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Hero from '../_components/Hero';
+import Hero from '@/app/_components/Hero';
 import { vi } from 'vitest';
 
 // Framer Motion 모킹
@@ -16,6 +16,14 @@ vi.mock('framer-motion', () => ({
     ),
   },
   AnimatePresence: ({ children }: any) => <>{children}</>,
+  useMotionValue: () => ({
+    get: () => 0,
+    set: () => {},
+  }),
+  useTransform: () => ({
+    get: () => 0,
+    set: () => {},
+  }),
 }));
 
 // useImageMotion 모킹
@@ -37,10 +45,17 @@ vi.mock('@/hooks/useDarkMode', () => ({
   }),
 }));
 
+// next/image 모킹
+vi.mock('next/image', () => ({
+  default: ({ src, alt }: any) => <img src={src} alt={alt} />,
+}));
+
 // SnowFlowerfall 컴포넌트 모킹
-vi.mock('../_components/sub/SnowFlowerfall', () => ({
+vi.mock('@/app/_components/sub/SnowFlowerfall', () => ({
   default: ({ isDarkMode }: { isDarkMode: boolean }) => (
-    <div data-testid="snow-flower-fall">{isDarkMode ? 'Snow' : 'Flower'}</div>
+    <div data-testid="snow-flower-fall" data-dark-mode={isDarkMode}>
+      {isDarkMode ? 'Snow' : 'Flower'} Effect
+    </div>
   ),
 }));
 

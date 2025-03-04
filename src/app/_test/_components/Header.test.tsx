@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
-import Header from '../_components/Header';
-import { mockSetTheme } from '../__mocks__/nextThemes';
+import Header from '../../_components/Header';
+import { mockSetTheme } from '../../__mocks__/nextThemes';
 
 // navbarData 모킹
 vi.mock('@/assets/index', () => ({

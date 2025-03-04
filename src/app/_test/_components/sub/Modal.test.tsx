@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Modal from '../../_components/sub/Modal';
+import Modal from '@/app/_components/sub/Modal';
 
 // Swiper 모킹
-vi.mock('../_components/sub/Swiper', () => ({
+vi.mock('@/app/_components/sub/Swiper', () => ({
   default: () => <div data-testid="swiper-container">Swiper Mock</div>
 }));
 
