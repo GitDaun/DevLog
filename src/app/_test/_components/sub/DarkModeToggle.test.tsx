@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import DarkModeToggle from '@/app/_components/sub/DarkModeToggle';
 import { vi } from 'vitest';
 import { useTheme } from 'next-themes';
-
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // next-themes 모킹
 vi.mock('next-themes', () => ({
   useTheme: vi.fn(() => ({
@@ -38,7 +38,7 @@ describe('DarkModeToggle 컴포넌트', () => {
 
   it('matchMedia API를 사용할 수 없는 경우 기본값으로 light를 사용해야 함', () => {
     // matchMedia API 제거
-    // @ts-ignore
+    // @ts-expect-error
     window.matchMedia = undefined;
 
     render(<DarkModeToggle />);
@@ -48,7 +48,7 @@ describe('DarkModeToggle 컴포넌트', () => {
   });
 
   it('matchMedia API가 없어도 테마 전환이 작동해야 함', () => {
-    // @ts-ignore
+    // @ts-expect-error
     window.matchMedia = undefined;
 
     const mockSetTheme = vi.fn();
@@ -70,7 +70,7 @@ describe('DarkModeToggle 컴포넌트', () => {
 
   it('matchMedia 관련 에러가 발생해도 컴포넌트가 정상 렌더링되어야 함', () => {
     // matchMedia가 에러를 던지도록 설정
-    // @ts-ignore
+    // @ts-expect-error
     window.matchMedia = () => {
       throw new Error('matchMedia not supported');
     };
